@@ -18,7 +18,7 @@ header {
   max-width: 2000px;
   margin: 0 auto;
   height: 25vh;
-  background-image: url("/assets/img/fondoTop.jpg");
+  background-image: url("../assets/img/fondoTop.jpg");
   background-size: cover;
   background-position: center;
   padding: 0px;
@@ -108,7 +108,7 @@ input[type="checkbox"]:checked ~ .menu {
 
 /* Estilos para el contenido "middle" */
 .middle {
-  background-image: url("/assets/img/fondoRestBodi2.png");
+  background-image: url("../assets/img/fondoRestBodi2.png");
   background-size: cover;
   background-position: center;
   text-align: center;
