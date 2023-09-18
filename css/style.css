@@ -12,7 +12,8 @@
 body {
   height: 100vh;
   font-family:"lato" ;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.828);
+  position: relative;
 }
 
 /* Estilos Header */
@@ -27,6 +28,7 @@ header {
   padding: 0px;
   position: relative;
   text-align: center;
+  box-shadow: 2px 2px 4px  #41d5ef9a;
 }
 
 /* Estilos para video del banner */
@@ -41,8 +43,8 @@ header {
 /* Estilo h1*/
 h1{
   font-family: "lato";
-  color: #f4d721;
-  text-shadow: 2px 2px 4px  hsla(52, 62%, 39%, 0.765);
+  color: #f6229ac9;
+  text-shadow: 2px 2px 4px   rgba(0, 0, 0, 0.703);
   font-size: 4rem;
   letter-spacing: 6px;
   padding: 10px;
@@ -59,7 +61,7 @@ h1{
 }
 .logos a i {
   font-size: 30px;
-  color: #e8c827c4;
+  color: #f4d721;;
   margin-right: 10px;
 }
 
@@ -82,10 +84,10 @@ nav {
 
 /* Icono de menú */
 label[for="menu-toggle-checkbox"] {
-  font-family: "lato";
+  font-family: "lato light";
   font-weight:lighter;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
   padding: 10px 40px;
   margin-bottom: 60px;
@@ -96,9 +98,9 @@ label[for="menu-toggle-checkbox"] {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: rgba(255, 0, 255, 0.494);
+  background-color: #ff00ff7e;
   position: absolute;
-  bottom: -267px;
+  bottom: -277px;
   right: 0;
   opacity: 0;
   pointer-events: none;
@@ -148,22 +150,71 @@ input[type="checkbox"]:checked ~ .menu {
 /* Estilos generales para los articles*/
 article {
   width: 50%;
-  margin: 20px auto;
+  margin: 25% 25%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
   overflow: hidden;
   box-sizing: border-box;
+  margin-top: 60px;
+  position: absolute;
+  box-shadow: 6px 6px 6px   #09bddd5a;
+  margin-left: 400px;
 }
 
 article img {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.828);
+}
+/* Estilo para el artículo de texto about tapi*/
+.texto {
+  width: 45%;
+  float: left;
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  margin-left: 680px;
+  position: absolute;
+  overflow-y:scroll;
+  max-height: 500px;
+  font-family: "lato light";
+  color: #a9e8f4;
+  margin-top: 70px;
+}
+
+/* Estilo para el párrafo dentro de .texto */
+.texto p {
+  margin: 0 20px 20px 20px;
+}
+
+/* Estilo para el div izquierdo de aboutTapi */
+.div-izquierdo {
+  width: 20%;
+  float: left;
+  padding: 10px;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  position: absolute;
+  margin-left: 240px;
+  max-height: 500px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el contenido del div izquierdo de aboutTapi*/
+.div-izquierdo img {
+  max-width: 100%; /* La imagen se ajustará al ancho del div */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  max-height: 500px;
 
 }
+
 /* Estilos para la página de Contacto */
 .contacto article {
   width: 800px;
@@ -227,33 +278,41 @@ article img {
 }
 
 /* Estilos para el artículo de preguntas frecuentes */
-.preguntas-frecuentes {
-  width: 100%;
-  margin: 20px 1%;
+.preguntas article {
+  width: 40%;
+  margin: 25% 25%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
+  overflow: hidden;
   box-sizing: border-box;
+  margin-top: 42px;
+  position: absolute;
+  box-shadow: 6px 6px 6px   #09bddd5a;
+  margin-left: 100px;
 }
 
 /* Estilos para el artículo de cotización */
 .cotizacion {
-  width: 48%;
-  margin: 20px 1%;
+  width: 40%;
+  margin: 30px 1%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
   float: left;
   box-sizing: border-box;
+  margin-left: 800px;
+  margin-top: 60px;
 }
 
 /* Estilo para el título de los articles */
 article h2 {
   font-family: "lato";
-  color: #f4d721;
+  color: #f4d821a3;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 1.5rem;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* Estilo para el section de preguntas frecuentes */
@@ -262,6 +321,7 @@ article h2 {
   width: 45%;
   background-size: cover;
   background-position: center;
+  margin-top: 20px;
 }
 
 /* Estilos para la lista de preguntas frecuentes */
@@ -277,6 +337,7 @@ article h2 {
 }
 
 .faq-list .question::before {
+  color: #22d6f6;
   content: "+";
   position: absolute;
   left: 0;
@@ -289,6 +350,13 @@ article h2 {
   display: none;
 }
 
+.question div {
+  font-family: "lato";
+  font-size: medium;
+  letter-spacing: 1.5;
+  line-height: 1.5;
+}
+
 /* Estilos para el formulario de cotización */
 form {
   margin-top: 20px;
@@ -297,21 +365,22 @@ form {
 /* Estilo para los nombres de los campos*/
 form label {
   font-family: "lato";
-  color: rgba(8, 187, 241, 0.486);
+  color: #22d6f6;
   display: block;
   margin-bottom: 5px;
   float: left;
   letter-spacing: 2px;
   line-height: 2;
   clear: left;
+  margin-left: 62px;
+  margin-top: 20px;
 }
 .down {
-line-height: 2;
+line-height:12;
 clear: left;
 font-family: "lato";
-font-size: 16px; /* Tamaño de fuente para la primera línea */
-font-weight: bold; /* Texto en negrita para la primera línea */
- /* Hacer que la segunda línea esté en su propia línea */
+font-size: 16px;
+font-weight: bold;
 margin-top: -10px;
 }
 
@@ -322,51 +391,64 @@ form input[type="email"],
 input[type="file"],
 form imput [type="textarea"] {
   height: 54%;
-  width: 60%;
+  width: 50%;
   padding: 2px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   float: right;
   line-height: 2;
+  margin-top: 20px;
+  margin-right: 51px;
+  background-color:#cccccc83;
 }
 
 /* Estilos para el cuadro de texto de la consulta */
 form textarea {
-  width: 60%;
-  height: 54%;
+  width: 50%;
+  height: 50%;
   padding: 2px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   float: right;
   line-height: 2;
+  margin-right: 51px;
+  background-color:#cccccc83;
 }
 
 /* Estilos para seccion subir imagnen*/
 form input[type="file"] {
-  width: 60%;
+  width: 16%;
   height: auto;
-  padding: 2px;
-  margin-bottom: 10px;
+  padding: 30px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: px;
   float: right;
   line-height: 2;
+  margin-right: 199px;
+
 }
 
 /* Estilos para el botón en la sección de cotización */
 .cotizacion button {
-  background-color: #f4d721;
-  color: #000;
+  font-family: "lato";
+  font-size: small;
+  letter-spacing: 1.5px;
+  background-color: rgba(255, 0, 255, 0.5);
+  color: #22d6f6;
   border: none;
-  border-radius: 5px;
-  padding: 11px 8px;
+  border-radius: 10px;
+  padding: 11px 24px;
   cursor: pointer;
   font-weight: bold;
-  clear: both; /* Evita la superposición */
+  clear: both;
   float: right;
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+  margin-top: -87px;
+  box-shadow: 0px 0px 19px  rgba(0, 0, 0, 0.852);
+  margin-right: 20px;
+  
 }
 
 /* Estilos del footer */
