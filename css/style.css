@@ -3,11 +3,10 @@
   font-family: "lato";
   src: url(../assets/Fonts/Lato-BlackItalic.ttf);
 }
-/* Estilos generales */
+
 * {
   margin: 0;
   padding: 0;
-  /* border: 1px solid red; */
 }
 
 body {
@@ -84,7 +83,9 @@ nav {
 /* Icono de menú */
 label[for="menu-toggle-checkbox"] {
   font-family: "lato";
-  font-size: 25px;
+  font-weight:lighter;
+  letter-spacing: 2px;
+  font-size: 20px;
   cursor: pointer;
   padding: 10px 40px;
   margin-bottom: 60px;
@@ -97,7 +98,7 @@ label[for="menu-toggle-checkbox"] {
   margin: 0;
   background-color: rgba(255, 0, 255, 0.494);
   position: absolute;
-  bottom: -215px;
+  bottom: -267px;
   right: 0;
   opacity: 0;
   pointer-events: none;
@@ -137,13 +138,14 @@ input[type="checkbox"]:checked ~ .menu {
 
 /* Estilos para el contenido "middle" */
 .middle {
+  min-height: calc(132vh - 17vh - 5vh);
   background-image: url("../assets/img/fondoRestBodi2.png");
   background-size: cover;
   background-position: center;
   text-align: center;
 }
 
-
+/* Estilos generales para los articles*/
 article {
   width: 50%;
   margin: 20px auto;
@@ -162,7 +164,7 @@ article img {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.828);
 
 }
-
+/* Estilos para la página de Contacto */
 .contacto article {
   width: 800px;
   height: 600px ;
@@ -222,6 +224,149 @@ article img {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.533);
   display: inline-block;
   vertical-align: top;
+}
+
+/* Estilos para el artículo de preguntas frecuentes */
+.preguntas-frecuentes {
+  width: 100%;
+  margin: 20px 1%;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el artículo de cotización */
+.cotizacion {
+  width: 48%;
+  margin: 20px 1%;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  padding: 10px;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* Estilo para el título de los articles */
+article h2 {
+  font-family: "lato";
+  color: #f4d721;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el section de preguntas frecuentes */
+.preguntas-section {
+  float: left;
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilos para la lista de preguntas frecuentes */
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.faq-list .question::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-list .answer {
+  display: none;
+}
+
+/* Estilos para el formulario de cotización */
+form {
+  margin-top: 20px;
+}
+
+/* Estilo para los nombres de los campos*/
+form label {
+  font-family: "lato";
+  color: rgba(8, 187, 241, 0.486);
+  display: block;
+  margin-bottom: 5px;
+  float: left;
+  letter-spacing: 2px;
+  line-height: 2;
+  clear: left;
+}
+.down {
+line-height: 2;
+clear: left;
+font-family: "lato";
+font-size: 16px; /* Tamaño de fuente para la primera línea */
+font-weight: bold; /* Texto en negrita para la primera línea */
+ /* Hacer que la segunda línea esté en su propia línea */
+margin-top: -10px;
+}
+
+/* Estilo para los campos de*/
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+input[type="file"],
+form imput [type="textarea"] {
+  height: 54%;
+  width: 60%;
+  padding: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: right;
+  line-height: 2;
+}
+
+/* Estilos para el cuadro de texto de la consulta */
+form textarea {
+  width: 60%;
+  height: 54%;
+  padding: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: right;
+  line-height: 2;
+}
+
+/* Estilos para seccion subir imagnen*/
+form input[type="file"] {
+  width: 60%;
+  height: auto;
+  padding: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: right;
+  line-height: 2;
+}
+
+/* Estilos para el botón en la sección de cotización */
+.cotizacion button {
+  background-color: #f4d721;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  clear: both; /* Evita la superposición */
+  float: right;
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
 }
 
 /* Estilos del footer */
