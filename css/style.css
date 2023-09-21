@@ -4,14 +4,14 @@
   src: url(../assets/Fonts/Lato-Bold.ttf);
 }
 
-* {
+/** {
   margin: 0;
   padding: 0;
-}
+}*/
 
 body {
   height: 100vh;
-  font-family: 'lato';
+  font-family: 'latolihi', sans-serif;
   background-color: rgba(0, 0, 0, 0.828);
   position: relative;
 }
@@ -208,8 +208,8 @@ article img {
 
 /* Estilo para el contenido del div izquierdo de aboutTapi*/
 .div-izquierdo img {
-  max-width: 100%; /* La imagen se ajustará al ancho del div */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  max-width: 100%;
+  height: auto;
   max-height: 500px;
 }
 
@@ -275,6 +275,16 @@ article img {
   vertical-align: top;
 }
 
+/* Estilo para el título de los articles */
+article h2 {
+  font-family: 'latolighti', sans-serif;
+  color: #f4d821a3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 /* Estilos para el artículo de preguntas frecuentes */
 .preguntas article {
   width: 40%;
@@ -290,6 +300,71 @@ article img {
   margin-left: 100px;
 }
 
+/* Estilo para el section de preguntas frecuentes */
+.preguntas-section {
+    float: left;
+    width: 45%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+}
+
+/* Establecer un margen de 20px desde el artículo de cotización */
+.preguntas {
+    margin-bottom: 20px;
+}
+
+/* Estilo de la pregunta */
+.question-label {
+    font-weight: bold;
+    cursor: pointer;
+    color: #22d6f6;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    display: block;
+    letter-spacing: 1.5;
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cambiar el color de fondo al pasar el cursor */
+.question-label:hover {
+    background-color: rgba(0, 0, 0, 0.325);
+}
+/* Ocultar las respuestas por defecto */
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    color: #8dd4e0;
+    padding: 10px;
+    font-family: 'latolighti', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+}
+
+/* Mostrar respuestas cuando la casilla de verificación está marcada */
+.question-input:checked + .question-label + .answer {
+    max-height: 1000px; /* Un valor suficientemente grande para mostrar todo el contenido */
+}
+
+/* Estilos para el símbolo de alternancia */
+.question-label::before {
+    content:none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Cambiar el símbolo cuando la casilla de verificación está marcada */
+.question-input:checked + .question-label::before {
+    content:none;
+}
+
 /* Estilos para el artículo de cotización */
 .cotizacion {
   width: 40%;
@@ -301,58 +376,6 @@ article img {
   box-sizing: border-box;
   margin-left: 800px;
   margin-top: 60px;
-}
-
-/* Estilo para el título de los articles */
-article h2 {
-  font-family: 'lato';
-  color: #f4d821a3;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-/* Estilo para el section de preguntas frecuentes */
-.preguntas-section {
-  float: left;
-  width: 45%;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-}
-
-/* Estilos para la lista de preguntas frecuentes */
-.faq-list {
-  list-style: none;
-  padding: 0;
-}
-
-.faq-list li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.faq-list .question::before {
-  color: #22d6f6;
-  content: '+';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.faq-list .answer {
-  display: none;
-}
-
-.question div {
-  font-family: 'lato';
-  font-size: medium;
-  letter-spacing: 1.5;
-  line-height: 1.5;
 }
 
 /* Estilos para el formulario de cotización */
