@@ -45,13 +45,13 @@ header {
 /* Estilo h1*/
 h1 {
   font-family: 'lato';
-  color: #f6229ac9;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.703);
+  color: #ee1d94c9;
   font-size: 4rem;
   letter-spacing: 6px;
   padding: 10px;
   line-height: 21vh;
   margin: 0;
+  text-shadow: 0 0 10px  rgba(0, 0, 0, 0.828),  0 0 20px  #f6229ab0, 0 0 40px  #f6229ab0;
 }
 
 /* Logos redes */
