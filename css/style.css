@@ -4,10 +4,13 @@
   src: url(../assets/Fonts/Lato-Bold.ttf);
 }
 
-/** {
+
+/* Ejemplo de reset de CSS */
+* {
   margin: 0;
   padding: 0;
-}*/
+  box-sizing: border-box;
+}
 
 body {
   height: 100vh;
@@ -278,17 +281,17 @@ article img {
 /* Estilo para el título de los articles */
 article h2 {
   font-family: 'latolighti', sans-serif;
-  color: #f4d821a3;
+  color:#edd53ce8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 1.5rem;
   margin-bottom: 10px;
   margin-top: 10px;
+  letter-spacing: 1.5;
 }
 
 /* Estilos para el artículo de preguntas frecuentes */
-.preguntas article {
+.preguntas {
   width: 40%;
-  margin: 25% 25%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
@@ -302,67 +305,63 @@ article h2 {
 
 /* Estilo para el section de preguntas frecuentes */
 .preguntas-section {
-    float: left;
-    width: 45%;
-    background-size: cover;
-    background-position: center;
-    margin-top: 20px;
-}
-
-/* Establecer un margen de 20px desde el artículo de cotización */
-.preguntas {
-    margin-bottom: 20px;
+  float: left;
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
 }
 
 /* Estilo de la pregunta */
 .question-label {
-    font-weight: bold;
-    cursor: pointer;
-    color: #22d6f6;
-    padding: 10px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    display: block;
-    letter-spacing: 1.5;
+  font-weight: bold;
+  cursor: pointer;
+  color: #22d6f6;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  display: block;
+  letter-spacing: 1.5;
 }
 
 .faq-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Cambiar el color de fondo al pasar el cursor */
 .question-label:hover {
-    background-color: rgba(0, 0, 0, 0.325);
+  background-color: rgba(0, 0, 0, 0.325);
 }
 /* Ocultar las respuestas por defecto */
 .answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    color: #8dd4e0;
-    padding: 10px;
-    font-family: 'latolighti', sans-serif;
-    line-height: 1.5;
-    letter-spacing: 1.5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  color: #8dd4e0;
+  padding: 10px;
+  font-family: 'latolighti', sans-serif;
+  line-height: 2.5;
+  letter-spacing: 1.5;
 }
 
 /* Mostrar respuestas cuando la casilla de verificación está marcada */
 .question-input:checked + .question-label + .answer {
-    max-height: 1000px; /* Un valor suficientemente grande para mostrar todo el contenido */
+  max-height: 1000px; /* Un valor suficientemente grande para mostrar todo el contenido */
+  margin-top: 10px; 
 }
 
 /* Estilos para el símbolo de alternancia */
 .question-label::before {
-    content:none;
-    display: inline-block;
-    margin-right: 5px;
+  content: none;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 /* Cambiar el símbolo cuando la casilla de verificación está marcada */
 .question-input:checked + .question-label::before {
-    content:none;
+  content: none;
 }
 
 /* Estilos para el artículo de cotización */
@@ -374,8 +373,9 @@ article h2 {
   padding: 10px;
   float: left;
   box-sizing: border-box;
-  margin-left: 800px;
+  margin-left: 700px;
   margin-top: 60px;
+  height: 100%;
 }
 
 /* Estilos para el formulario de cotización */
@@ -390,37 +390,25 @@ form label {
   display: block;
   margin-bottom: 5px;
   float: left;
-  letter-spacing: 2px;
-  line-height: 2;
+  letter-spacing: 1px;
+  line-height: 1.5;
   clear: left;
-  margin-left: 62px;
+  margin-left: 10px;
   margin-top: 20px;
-}
-.down {
-  line-height: 12;
-  clear: left;
-  font-family: 'lato';
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: -10px;
 }
 
 /* Estilo para los campos de*/
 form input[type='text'],
 form input[type='tel'],
-form input[type='email'],
-input[type='file'],
-form imput [type='textarea'] {
-  height: 54%;
+form input[type='email']{
   width: 50%;
-  padding: 2px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
   float: right;
   line-height: 2;
-  margin-top: 20px;
-  margin-right: 51px;
+  margin-top: 5px;
+  margin-right: 40px;
   background-color: #cccccc83;
 }
 
@@ -431,24 +419,26 @@ form textarea {
   padding: 2px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
+  background-color:  #cccccc83;
   border-radius: 10px;
   float: right;
-  line-height: 2;
-  margin-right: 51px;
-  background-color: #cccccc83;
+  line-height: 1;
+  margin-right: 40px;
 }
 
 /* Estilos para seccion subir imagnen*/
 form input[type='file'] {
-  width: 16%;
+  width: 29%;
   height: auto;
-  padding: 30px;
-  margin-bottom: 12px;
+  padding: 5px;
   border: 1px solid #ccc;
-  border-radius: px;
-  float: right;
-  line-height: 2;
-  margin-right: 199px;
+  background-color: #cccccc83;
+  border-radius: 10px;
+  margin-right: 59px;
+}
+
+form input[type='file']:hover {
+  background-color: #0e748683;
 }
 
 /* Estilos para el botón en la sección de cotización */
@@ -460,14 +450,14 @@ form input[type='file'] {
   color: #22d6f6;
   border: none;
   border-radius: 10px;
-  padding: 11px 24px;
+  padding: 13px 25px;
   cursor: pointer;
   font-weight: bold;
   clear: both;
   float: right;
-  margin-top: -87px;
+  margin-top: 8px;
   box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.852);
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 /* Estilos del footer */
