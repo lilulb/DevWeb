@@ -51,7 +51,8 @@ h1 {
   padding: 10px;
   line-height: 21vh;
   margin: 0;
-  text-shadow: 0 0 10px  rgba(0, 0, 0, 0.828),  0 0 20px  #f6229ab0, 0 0 40px  #f6229ab0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.828), 0 0 20px #f6229ab0,
+    0 0 40px #f6229ab0;
 }
 
 /* Logos redes */
