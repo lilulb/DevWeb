@@ -12,13 +12,24 @@
 }
 
 body {
-  height: 100vh;
   font-family: 'latolihi', sans-serif;
   background-color: rgba(0, 0, 0, 0.828);
-  position: relative;
 }
 
-/* Estilos Header */
+.background {
+  background-image: url('../assets/img/fondoRestBodi2.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+/* Estilos Header ------------------------------------*/
 header {
   width: 100%;
   max-width: 2000px;
@@ -69,7 +80,9 @@ h1 {
   margin-right: 10px;
 }
 
-/* Estilos menú desplegable */
+/* FIN header -------------------------------------------------------------- */
+
+/* Estilos menú desplegable  ----------------------------------------------- */
 nav {
   position: absolute;
   bottom: 10px;
@@ -163,12 +176,7 @@ input[type='checkbox']:checked ~ .menu {
   border-radius: 10px;
 }
 
-.background {
-  background-image: url('../assets/img/fondoRestBodi2.png');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
+/* FIN Estilos menú desplegable ---------------------------------------------- */
 
 /* INDEX -------------------------------------------------------------- */
 /* Estilos para el contenido "middle" */
@@ -181,19 +189,16 @@ input[type='checkbox']:checked ~ .menu {
 /* Estilos generales para los articles */
 article {
   width: 50%;
-  margin: 25% 25%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
   overflow: hidden;
   box-sizing: border-box;
-  margin-top: 60px;
-  position: absolute;
   box-shadow: 6px 6px 6px #09bddd5a;
-  margin-left: 400px;
+  margin-left: 0;
 }
 
-/* Estilos para los enlaces e imágenes en la seccion media */
+/* Estilos para los enlaces e imágenes en la seccion media INDEX */
 .border__section-media__article {
   display: grid;
   flex-direction: column;
@@ -206,7 +211,6 @@ article {
   box-shadow: 6px 6px 6px #09bddd5a;
   margin: 70px auto;
   width: 80%;
-  height: 80%;
   overflow: hidden;
   position: initial;
   gap: 10px;
@@ -247,7 +251,6 @@ article {
     height: 240px;
   }
 }
-
 /* ---------------------------------------------------------------------- */
 
 article img {
@@ -260,20 +263,16 @@ article img {
 /* Estilo para el artículo de texto about tapi*/
 .texto {
   width: 45%;
-  float: left;
   text-align: justify;
   line-height: 1.5;
   letter-spacing: 1px;
   padding: 10px;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
-  margin-left: 680px;
-  position: absolute;
   overflow-y: scroll;
   max-height: 500px;
   font-family: 'lato light';
   color: #a9e8f4;
-  margin-top: 70px;
 }
 
 /* Estilo para el párrafo dentro de .texto */
@@ -288,8 +287,6 @@ article img {
   padding: 10px;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
-  position: absolute;
-  margin-left: 240px;
   max-height: 500px;
   margin-top: 70px;
   margin-bottom: 20px;
@@ -377,16 +374,14 @@ article h2 {
 
 /* Estilos para el artículo de preguntas frecuentes */
 .preguntas {
-  width: 40%;
+  width: 80%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
   overflow: hidden;
   box-sizing: border-box;
   margin-top: 42px;
-  position: absolute;
   box-shadow: 6px 6px 6px #09bddd5a;
-  margin-left: 100px;
 }
 
 /* Estilo para el section de preguntas frecuentes */
@@ -457,11 +452,7 @@ article h2 {
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   padding: 10px;
-  float: left;
   box-sizing: border-box;
-  margin-left: 700px;
-  margin-top: 60px;
-  height: 75%;
 }
 
 /* Estilos para el formulario de cotización */
