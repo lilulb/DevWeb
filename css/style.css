@@ -53,6 +53,7 @@ h1 {
   margin: 0;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.828), 0 0 20px #f6229ab0,
     0 0 40px #f6229ab0;
+  z-index: 2;
 }
 
 /* Logos redes */
@@ -61,6 +62,7 @@ h1 {
   top: 20px;
   right: 90px;
 }
+
 .logos a i {
   font-size: 30px;
   color: #f4d721;
@@ -75,6 +77,27 @@ nav {
   background-color: rgba(255, 0, 255, 0.542);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
   border-radius: 10px;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .logos {
+    right: 29px;
+  }
+
+  nav {
+    right: 31px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logos {
+    right: 8px;
+  }
+
+  nav {
+    right: 15px;
+  }
 }
 
 .menu-toggle-label {
@@ -102,7 +125,7 @@ label[for='menu-toggle-checkbox'] {
   margin: 0;
   background-color: #ff00ff7e;
   position: absolute;
-  bottom: -277px;
+  bottom: -231px;
   right: 0;
   opacity: 0;
   pointer-events: none;
@@ -140,16 +163,22 @@ input[type='checkbox']:checked ~ .menu {
   border-radius: 10px;
 }
 
-/* Estilos para el contenido "middle" */
-.middle {
-  min-height: calc(132vh - 17vh - 5vh);
+.background {
   background-image: url('../assets/img/fondoRestBodi2.png');
   background-size: cover;
   background-position: center;
   text-align: center;
 }
 
-/* Estilos generales para los articles*/
+/* INDEX -------------------------------------------------------------- */
+/* Estilos para el contenido "middle" */
+.middle__index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos generales para los articles */
 article {
   width: 50%;
   margin: 25% 25%;
@@ -163,6 +192,63 @@ article {
   box-shadow: 6px 6px 6px #09bddd5a;
   margin-left: 400px;
 }
+
+/* Estilos para los enlaces e imágenes en la seccion media */
+.border__section-media__article {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 10px;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 0, 255, 0.18);
+  box-shadow: 6px 6px 6px #09bddd5a;
+  margin: 70px auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  position: initial;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+
+  .border__section-media__article {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 86%;
+  }
+
+  .border__section-media__article img {
+    width: 86%;
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+
+  .border__section-media__article {
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 86%;
+    height: initial;
+  }
+
+  .border__section-media__article img {
+    width: 86%;
+    height: 240px;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
 
 article img {
   width: 200px;
@@ -463,20 +549,20 @@ form input[type='file']:hover {
 
 /* Estilos del footer */
 footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   text-align: center;
   background-color: rgba(16, 2, 16, 0.388);
   height: 05vh;
   border-top: 2px solid rgba(8, 187, 241, 0.2);
   box-shadow: 0px -5px 05px rgba(8, 187, 241, 0.486);
-  position: fixed;
-  bottom: 0;
 }
 
 footer h4 {
   display: inline;
   color: rgb(60, 206, 251);
-  margin: 07px 200px 10px;
   font-family: 'lato';
   font-size: small;
   text-decoration: none;
