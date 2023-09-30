@@ -29,7 +29,7 @@ body {
   align-items: flex-start;
 }
 
-/* Estilos Header ------------------------------------*/
+/* Estilos Header ------------------------------------------------------------*/
 header {
   width: 100%;
   max-width: 2000px;
@@ -53,19 +53,33 @@ header {
   width: 100%;
   height: 100%;
 }
-/* Estilo h1*/
+/* Estilo h1*----------------------------------------*/
 h1 {
   font-family: 'lato';
-  color: #ee1d94c9;
+  color: #f737a4c9;
   font-size: 4rem;
   letter-spacing: 6px;
   padding: 10px;
   line-height: 21vh;
   margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.828), 0 0 20px #f6229ab0,
-    0 0 40px #f6229ab0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.722), 0 0 20px #f6229ab0,
+    0 0 30px #f5048db0;
   z-index: 2;
 }
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 22vh;
+  }
+}
+
+/* Fin estilo h1*----------------------------------------*/
 
 /* Logos redes */
 .logos {
@@ -80,17 +94,21 @@ h1 {
   margin-right: 10px;
 }
 
-/* FIN header -------------------------------------------------------------- */
+/* FIN header --------------------------------------------------------------- */
 
-/* Estilos menú desplegable  ----------------------------------------------- */
+/* Estilos menú desplegable  ------------------------------------------------ */
 nav {
   position: absolute;
   bottom: 10px;
   right: 80px;
-  background-color: rgba(255, 0, 255, 0.542);
+  background-color: #a204a27e;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 @media (max-width: 767px) {
@@ -117,7 +135,6 @@ nav {
   font-size: 25px;
   cursor: pointer;
   padding: 10px 40px;
-  margin-bottom: 60px;
 }
 
 /* Icono de menú */
@@ -127,8 +144,8 @@ label[for='menu-toggle-checkbox'] {
   letter-spacing: 2px;
   font-size: 30px;
   cursor: pointer;
-  padding: 10px 40px;
-  margin-bottom: 60px;
+  padding: 0px 30px;
+  color: rgb(51, 202, 248);
 }
 
 /* Lista de menú */
@@ -136,14 +153,20 @@ label[for='menu-toggle-checkbox'] {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #ff00ff7e;
+  background-color: #a204a27e;
   position: absolute;
-  bottom: -231px;
+  bottom: -265px;
   right: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-  border-radius: 10px;
+  border-radius: 5px;
+  width: 131%;
+}
+
+.menu li {
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
 input[type='checkbox'] {
@@ -156,13 +179,13 @@ input[type='checkbox']:checked ~ .menu {
   pointer-events: auto;
 }
 
-.menu li {
+.menu li:not(:last-child) {
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .menu a {
-  color: rgb(3, 193, 251);
+  color: rgb(51, 202, 248);
   text-decoration: none;
   padding: 10px 20px;
   font-size: medium;
@@ -171,14 +194,14 @@ input[type='checkbox']:checked ~ .menu {
   display: block;
 }
 .menu a:hover {
-  color: rgb(59, 207, 252);
+  color: rgb(51, 202, 248);
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 /* FIN Estilos menú desplegable ---------------------------------------------- */
 
-/* INDEX -------------------------------------------------------------- */
+/* ------------------------- INDEX -------------------------------------------------------------- */
 /* Estilos para el contenido "middle" */
 .middle__index {
   display: flex;
@@ -252,6 +275,48 @@ article {
   }
 }
 /* ---------------------------------------------------------------------- */
+/* ---------------------------------- GALERIA -------------------------------------------------*/
+.middle {
+  padding: 30px;
+}
+.article {
+  padding: 20px;
+  height: 440px;
+}
+
+/* Ancho del carrusel */
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Altura del carrusel */
+.carousel-inner {
+  max-height: 400px;
+}
+
+.carousel-item.active {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Tamaño de las imágenes dentro del carrusel */
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  article {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  article {
+    width: 80%;
+  }
+}
+/* -----------------------------------------------------------------------------------------------*/
 
 article img {
   width: 200px;
@@ -542,7 +607,7 @@ form input[type='file']:hover {
 footer {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   text-align: center;
   background-color: rgba(16, 2, 16, 0.388);
@@ -551,7 +616,7 @@ footer {
   box-shadow: 0px -5px 05px rgba(8, 187, 241, 0.486);
 }
 
-footer h4 {
+footer a {
   display: inline;
   color: rgb(60, 206, 251);
   font-family: 'lato';
