@@ -318,6 +318,8 @@ article {
 }
 /* -----------------------------------------------------------------------------------------------*/
 
+/* ---------------------------------- ABOUT TAPI-------------------------------------------------*/
+
 article img {
   width: 200px;
   height: 200px;
@@ -327,6 +329,7 @@ article img {
 }
 /* Estilo para el artículo de texto about tapi*/
 .texto {
+  font-family: 'lato' sa;
   width: 45%;
   text-align: justify;
   line-height: 1.5;
@@ -347,22 +350,21 @@ article img {
 
 /* Estilo para el div izquierdo de aboutTapi */
 .div-izquierdo {
-  width: 20%;
+  width: 37%;
   float: left;
   padding: 10px;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   max-height: 500px;
-  margin-top: 70px;
-  margin-bottom: 20px;
 }
 
 /* Estilo para el contenido del div izquierdo de aboutTapi*/
 .div-izquierdo img {
-  max-width: 100%;
-  height: auto;
-  max-height: 500px;
+  max-width: 96%;
 }
+/* -----------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------- CONTACTO----------------------------------------------------*/
 
 /* Estilos para la página de Contacto */
 .contacto article {
@@ -425,6 +427,8 @@ article img {
   display: inline-block;
   vertical-align: top;
 }
+/* -----------------------------------------------------------------------------------------------*/
+/* ---------------------------------- INFO -------------------------------------------------------*/
 
 /* Estilo para el título de los articles */
 article h2 {
@@ -602,6 +606,8 @@ form input[type='file']:hover {
   margin-right: 40px;
   margin-top: 180spx;
 }
+/* -----------------------------------------------------------------------------------------------*/
+/* ---------------------------------- FOOTER -----------------------------------------------------*/
 
 /* Estilos del footer */
 footer {
