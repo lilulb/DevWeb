@@ -29,7 +29,7 @@ body {
   align-items: flex-start;
 }
 
-/* Estilos Header ------------------------------------------------------------*/
+/* ------------------------------------HEADER-----------------------------------------------------*/
 header {
   width: 100%;
   max-width: 2000px;
@@ -56,26 +56,34 @@ header {
 /* Estilo h1*----------------------------------------*/
 h1 {
   font-family: 'lato';
-  color: #f737a4c9;
+  color: hsla(313, 93%, 48%, 0.788);
   font-size: 4rem;
   letter-spacing: 6px;
   padding: 10px;
   line-height: 21vh;
   margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.722), 0 0 20px #f6229ab0,
-    0 0 30px #f5048db0;
+  text-shadow: 0 0 10px rgba(64, 11, 44, 0.722), 0 0 20px #9d095db0,
+    0 0 30px #3b0c27b0;
   z-index: 2;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size:2rem;
+    letter-spacing: 2px;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    font-size: x-large;
     line-height: 22vh;
+    letter-spacing: 2px;
   }
 }
 
@@ -84,19 +92,17 @@ h1 {
 /* Logos redes */
 .logos {
   position: absolute;
-  top: 20px;
-  right: 90px;
+  top: 10px;
+  right: 85px;
 }
 
 .logos a i {
-  font-size: 30px;
+  font-size: 20px;
   color: #f4d721;
   margin-right: 10px;
 }
 
-/* FIN header --------------------------------------------------------------- */
-
-/* Estilos menú desplegable  ------------------------------------------------ */
+/* Estilos menú desplegable-------------------------- */
 nav {
   position: absolute;
   bottom: 10px;
@@ -119,6 +125,9 @@ nav {
   nav {
     right: 31px;
   }
+  label[for='menu-toggle-checkbox'] {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -128,6 +137,9 @@ nav {
 
   nav {
     right: 15px;
+  }
+  label[for='menu-toggle-checkbox'] {
+    font-size: 20px;
   }
 }
 
@@ -148,6 +160,11 @@ label[for='menu-toggle-checkbox'] {
   color: rgb(51, 202, 248);
 }
 
+@media (max-width: 767px) {
+  label[for='menu-toggle-checkbox'] {
+    font-size: 20px;
+  }
+}
 /* Lista de menú */
 .menu {
   list-style: none;
@@ -193,15 +210,42 @@ input[type='checkbox']:checked ~ .menu {
   position: relative;
   display: block;
 }
+
 .menu a:hover {
   color: rgb(51, 202, 248);
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
-/* FIN Estilos menú desplegable ---------------------------------------------- */
+@media (max-width: 767px) {
+  .menu a {
+    padding: 13px 15px;
+    font-size: small;
+  }
 
-/* ------------------------- INDEX -------------------------------------------------------------- */
+  .menu {
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    width: 120%;
+  }
+}
+
+@media (max-width: 480px) {
+  label[for='menu-toggle-checkbox'] {
+    padding: 0px 25px;
+  }
+  .menu a {
+    font-size: x-small;
+    padding: 17px 14px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------------INICIO------------------------------------------------------ */
 /* Estilos para el contenido "middle" */
 .middle__index {
   display: flex;
@@ -302,7 +346,7 @@ article {
 
 /* Tamaño de las imágenes dentro del carrusel */
 .carousel-inner img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 @media (max-width: 767px) {
@@ -352,7 +396,7 @@ article img {
 .div-izquierdo {
   width: 37%;
   float: left;
-  padding: 10px;
+  padding: 5px;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
   max-height: 500px;
@@ -360,7 +404,7 @@ article img {
 
 /* Estilo para el contenido del div izquierdo de aboutTapi*/
 .div-izquierdo img {
-  max-width: 96%;
+  max-width: 76%;
 }
 /* -----------------------------------------------------------------------------------------------*/
 
@@ -430,15 +474,22 @@ article img {
 /* -----------------------------------------------------------------------------------------------*/
 /* ---------------------------------- INFO -------------------------------------------------------*/
 
+/* Estillo para el middle*/
+.middle__info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
 /* Estilo para el título de los articles */
 article h2 {
   font-family: 'latolighti', sans-serif;
   color: #edd53ce8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   margin-top: 10px;
-  letter-spacing: 1.5;
+  letter-spacing: 2;
 }
 
 /* Estilos para el artículo de preguntas frecuentes */
@@ -459,7 +510,7 @@ article h2 {
   width: 45%;
   background-size: cover;
   background-position: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 /* Estilo de la pregunta */
@@ -604,6 +655,32 @@ form input[type='file']:hover {
   box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.852);
   margin-right: 40px;
   margin-top: 180spx;
+}
+
+@media (max-width: 480px) {
+  .middle__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+  }
+
+  .preguntas-section,
+  .cotizacion {
+    width: 90%;
+    margin: 15px auto;
+    float: none;
+  }
+  article {
+    width: 90%;
+    margin: 15px auto;
+    float: none;
+  }
+
+  body {
+    font-size: 14px;
+  }
 }
 /* -----------------------------------------------------------------------------------------------*/
 /* ---------------------------------- FOOTER -----------------------------------------------------*/
