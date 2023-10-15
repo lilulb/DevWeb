@@ -156,10 +156,16 @@ h1 {
   .header__header-nav {
     right: 31px;
   }
+  label[for='menu-toggle-checkbox'] {
+    font-size: 25px;
+  }
 }
 @media (max-width: 480px) {
   .header__header-nav {
     right: 15px;
+  }
+  label[for='menu-toggle-checkbox'] {
+    font-size: 20px;
   }
 }
 
