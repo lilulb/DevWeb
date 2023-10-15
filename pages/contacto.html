@@ -14,22 +14,22 @@
     />
   </head>
   <body>
-    <header class="elemento-top-text-page">
+    <header class="header">
       <h1>Contacto</h1>
-      <div class="logos">
-        <a href="https://www.facebook.com/"
+      <div class="header__div-logos">
+        <a class="div-logos__a" href="https://www.facebook.com/"
           ><i class="fa-brands fa-facebook"></i
         ></a>
-        <a href="https://www.instagram.com/"
+        <a class="div-logos__a" href="https://www.instagram.com/"
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </div>
-      <nav>
+      <nav class="header__header-nav">
         <input type="checkbox" id="menu-toggle-checkbox" />
         <label for="menu-toggle-checkbox" class="menu-toggle-label"
           >&#9776;</label
         >
-        <ul class="menu">
+        <ul class="header-nav-ul">
           <li><a href="../index.html">Inicio</a></li>
           <li><a href="./galeria.html">Galería</a></li>
           <li><a href="./cuidados.html">Cuidados</a></li>
@@ -38,12 +38,10 @@
         </ul>
       </nav>
     </header>
-
-    <section class="middle background">
+    <section class="middle__contacto background">
       <article class="contacto">
         <div class="redeesContacto">
           <table>
-            <tr>
               <td>
                 <a href="mailto:tu-direccion-de-correo@example.com">
                   <i class="fa-solid fa-envelope"></i>
@@ -54,8 +52,6 @@
                   <i class="fa-brands fa-facebook"></i>
                 </a>
               </td>
-            </tr>
-            <tr>
               <td>
                 <a href="https://www.instagram.com/">
                   <i class="fa-brands fa-instagram"></i>
@@ -66,8 +62,9 @@
                   <i class="fa-brands fa-whatsapp"></i>
                 </a>
               </td>
-            </tr>
           </table>
+          </div>
+          <div class="p-contacto">
           <p>
             Aquí puedes encontrar nuestras redes sociales y contacto. <br />
             Correo: tapitatto@gmail.com<br />
@@ -87,13 +84,12 @@
         </div>
       </article>
     </section>
-
-    <footer>
-      <h4>
+    <footer class="footer">
+      <h4 class="footer-h4">
         <a href="./info.html">Preguntas Frecuentes</a>
       </h4>
-      <h4 class="ubicacion">
-        <span class="ubicacion-icon">&#127968;</span
+      <h4 class="footer-h4">
+        <span class="footer-h4__icon">&#127968;</span
         ><a href="./contacto.html">Ubicación: Zona tres cruces</a>
       </h4>
     </footer>

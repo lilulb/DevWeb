@@ -1,0 +1,31 @@
+@import '../functions/mixins';
+@import '../base/fonts';
+@import '../base/variables';
+@import'../base/colors';
+
+
+/*Estilos del footer */
+.footer {
+  @include footer-lay;
+  width: $ancho;
+  background-image: url('../assets/img/fondoRestBodi2.png');
+  height: 05vh;
+  border-top: 2px solid rgba(8, 187, 241, 0.2);
+  box-shadow: map-get($sombras-color, 'footer-shadow');
+
+  a {
+    display: inline;
+    color: map-get($otros-color, 'footer-text');
+    font-family: $font1;
+    font-size: 0.875rem / $tamano1;
+    text-decoration: none;
+    letter-spacing: $menor;
+    font-weight: $font-wei-1;
+   }
+}
+.ubicacion-icon {
+  margin-right: 5px;
+}
+.ubicacion {
+  display: inline-block;
+}

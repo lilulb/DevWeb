@@ -1,0 +1,196 @@
+@import '../functions/mixins';
+@import '../base/fonts';
+@import '../base/variables';
+@import '../base/colors';
+
+/* ---------------------------------- INFO -------------------------------------------------------*/
+
+.middle__info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  
+}
+
+.titulos-info {
+  font-family: 'latolighti', sans-serif;
+  color: #edd53ce8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 2;
+}
+
+.section-preguntasfrec {
+  float: left;
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+}
+
+.info-preguntas {
+  width: 80%;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 42px;
+  box-shadow: 6px 6px 6px #09bddd5a;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.question-label {
+  font-weight: bold;
+  cursor: pointer;
+  color: #22d6f6;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  display: block;
+  letter-spacing: 1.5;
+}
+
+.question-label:hover {
+  background-color: rgba(0, 0, 0, 0.325);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  color: #8dd4e0;
+  padding: 10px;
+  font-family: 'latolighti', sans-serif;
+  line-height: 2.5;
+  letter-spacing: 1.5;
+}
+
+.question-input:checked + .question-label + .answer {
+  max-height: 1000px;
+  margin-top: 10px;
+}
+
+.question-label::before {
+  content: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.question-input:checked + .question-label::before {
+  content: none;
+}
+
+/* Estilos para el artículo de cotización */
+.article-cotizacion {
+  width: 45%;
+  margin: 30px 1%;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  form {
+    margin-top: 20px;
+
+    label {
+      font-family: 'lato';
+      color: #22d6f6;
+      display: block;
+      margin-bottom: 5px;
+      float: left;
+      letter-spacing: 1px;
+      line-height: 2.5;
+      clear: left;
+      margin-left: 10px;
+    }
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'] {
+      width: 50%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      float: right;
+      line-height: 2;
+      margin-top: 5px;
+      margin-right: 40px;
+      background-color: #cccccc83;
+    }
+
+    textarea {
+      width: 50%;
+      height: 50%;
+      padding: 2px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      background-color: #cccccc83;
+      border-radius: 10px;
+      float: right;
+      line-height: 1;
+      margin-right: 40px;
+    }
+
+    input[type='file'] {
+      width: 29%;
+      height: auto;
+      padding: 5px;
+      border: 1px solid #ccc;
+      background-color: #cccccc83;
+      border-radius: 10px;
+      margin-right: 59px;
+    }
+    input[type='file']:hover {
+      background-color: #0e748683;
+    }
+  }
+}
+
+
+/* Estilos para el botón en la sección de cotización */
+.datos-button-cotizar {
+  font-family: 'lato';
+  font-size: small;
+  letter-spacing: 1.5px;
+  background-color: rgba(255, 0, 255, 0.5);
+  color: #22d6f6;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  clear: both;
+  float: right;
+  margin-top: 8px;
+  box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.852);
+  margin-right: 40px;
+  margin-top: 180spx;
+}
+
+@media (max-width: 480px) {
+  .middle__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+  }
+
+  .section-preguntasfrec,
+  .article-cotizacion{
+    width: 90%;
+    margin: 15px auto;
+    float: none;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}

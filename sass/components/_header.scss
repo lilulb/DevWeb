@@ -1,0 +1,227 @@
+@import '../functions/mixins';
+@import '../base/fonts';
+@import '../base/variables';
+@import'../base/colors';
+
+.header {
+  width: $ancho;
+  max-width: $max-width;
+  margin: 0 auto;
+  height: $height-header;
+  background-image: url('../assets/img/fondoTop.jpg');
+  @include fondo-cover-center;
+  box-shadow: map-get($sombras-color, 'header-shadow');
+}
+
+/* Estilos para video del banner */
+.header__div-video {
+  height: $height-header;
+
+  .div-video__video {
+    width: $ancho;
+    height: $ancho;
+  }
+}
+
+/* Estilo h1*----------------------------------------*/
+h1 {
+  font-family: $font1;
+  color: map-get($colores, 'h1-color');
+  font-size: $tamano14;
+  font-weight: $font-wei-3;
+  letter-spacing: $mayor;
+  padding: 10px;
+  line-height: 21vh;
+  margin: 0;
+  text-shadow: map-get($sombras-color, 'h1-shadow');
+  z-index: 2;
+
+  @media (max-width: 767px) {
+    & {
+      @include flex-center-center;
+      font-size: $tamano6;
+      letter-spacing: $medio;
+    }
+  }
+
+  @media (max-width: 480px) {
+    & {
+      @include flex-row-center;
+      font-size: $tamano2;
+      line-height: 22vh;
+      letter-spacing: $medio;
+    }
+  }
+}
+/* Fin estilo h1*----------------------------------------*/
+
+/* Logos redes */
+.header__div-logos {
+  position: absolute;
+  top: 20%;
+  right: 6%;
+
+  .div-logos__a {
+    font-size: $tamano5;
+    color: map-get($colores, 'yelow');
+    letter-spacing: $medio;
+    padding:3%;
+  }
+
+  @media (max-width: 767px) {
+    & {
+      right: 29px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    & {
+      right: 8px;
+    }
+  }
+}
+/* Fin estilo logos redes *----------------------------------*/
+
+/* Estilos menú desplegable*/
+.header__header-nav {
+  position: absolute;
+  bottom: 10px;
+  right: 80px;
+  background-color: map-get($colores, 'background-rosa');
+  box-shadow: 0px 0px 10px map-get($colores, 'background');
+  border-radius: 5px;
+  z-index: 2;
+
+  @media (max-width: 767px) {
+    & {
+      right: 31px;
+    }
+  }
+  @media (max-width: 480px) {
+    & {
+      right: 15px;
+    }
+  }
+}
+/*---------------------------------*/
+.menu-toggle-label {
+  font-size: $tamano6;
+  cursor: pointer;
+  padding: 10px 40px;
+ color: map-get($colores, 'turquesa');
+}
+
+  /* Icono de menú */
+  label[for='menu-toggle-checkbox'] {
+    font-family: $font1;
+    font-weight: $font-wei-1;
+    letter-spacing: $medio;
+    font-size: $tamano5;
+    cursor: pointer;
+    padding: 0px 30px;
+    color: map-get($colores, 'turquesa');  
+}
+
+@media (max-width: 767px) {
+  label[for='menu-toggle-checkbox'] {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  label[for='menu-toggle-checkbox'] {
+    font-size: 20px;
+    padding: 0px 25px;
+  }
+}
+
+/* Estilos para la lista del menú */
+.header-nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: map-get($colores, 'background-rosa');
+  position: absolute;
+  bottom: -639%;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border-radius: $bord-r1;
+  width: $ancho + 60;
+}
+
+@media (max-width: 767px) {
+  .header-nav-ul {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    width: 120%;
+  }
+}
+
+.header-nav-ul li {
+  font-weight: $font-wei-2;
+  letter-spacing: $menor;
+}
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+
+  input[type='checkbox']:checked ~ .header-nav-ul {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.header-nav-ul li:not(:last-child) {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-nav-ul a {
+  color: map-get($colores, 'turquesa');
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: $tamano1;
+  transition: transform 0.3s;
+  position: relative;
+  display: block;
+  font-weight: $font-wei-1;
+
+ &:hover {
+  color: rgb(51, 202, 248);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+}
+
+@media (max-width: 480px) {
+  .header-nav-ul a {
+    font-size: x-small;
+    padding: 17px 14px;
+  }
+}
+@media (max-width: 767px) {
+  .header-nav-ul a {
+    padding: 13px 15px;
+    font-size: small;
+  }
+}
+
+.header-nav-ul a {
+  color: rgb(51, 202, 248);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: medium;
+  transition: transform 0.3s;
+  position: relative;
+  display: block;
+
+  .header-nav-ul a :hover {
+    color: rgb(51, 202, 248);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+}

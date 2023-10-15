@@ -1,0 +1,71 @@
+@import '../functions/mixins';
+@import '../base/fonts';
+@import '../base/variables';
+@import '../base/colors';
+
+/* Estilos para la página de Contacto */
+
+.middle__contacto {
+  @include flex-center-center;
+}
+
+article {
+  width: $ancho/2;
+}
+
+.contacto {
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+
+  /* Estilos para las celdas de la tabla */
+  td {
+    padding: 05px;
+  }
+
+  /* Estilos para los iconos */
+  a i {
+    font-size: $tamano12;
+    color: #09bddd;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 $tamano10;
+    transition: transform 0.2s ease-in-out;
+  }
+  a i:hover {
+    transform: scale(1.2); /* Cambia el tamaño del ícono al 120% en hover */
+  }
+  .redeesContacto {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
+
+  /* Estilos para el párrafo de texto */
+  p {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: $tamano1;
+    margin-top: 10px;
+    font-family: 'lato';
+    color: #f4d821cd;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+  .ubicacionMapa {
+    width: 490px;
+    height: 340px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 0, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.533);
+    display: inline-block;
+    vertical-align: top;
+  }
+}

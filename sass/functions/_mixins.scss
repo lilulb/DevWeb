@@ -1,0 +1,41 @@
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+
+@mixin fondo-cover-center() {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+
+@mixin flex-row-center() {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+@mixin flex-center-center() {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@mixin section-gral() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: center;
+}
+
+@mixin midle-back-cover(){
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+@mixin footer-lay(){
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}

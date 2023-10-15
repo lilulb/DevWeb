@@ -14,66 +14,80 @@
     <title>Tapi Tattoo</title>
   </head>
   <body>
-    <header class="elemento-top-text-page">
-      <div class="video-contenedor">
-        <video autoplay loop muted playsinline class="video-superpuesto">
+    <header class="header">
+      <div class="header__div-video">
+        <video autoplay loop muted playsinline class="div-video__video">
           <source
             src="./assets/video/LogoFloristaCircularBlancoNegro.mp4"
             type="video/mp4"
           />
         </video>
       </div>
-      <div class="logos">
-        <a href="https://www.facebook.com/"
+      <div class="header__div-logos">
+        <a class="div-logos__a" href="https://www.facebook.com/"
           ><i class="fa-brands fa-facebook"></i
         ></a>
-        <a href="https://www.instagram.com/"
+        <a class="div-logos__a" href="https://www.instagram.com/"
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </div>
-      <nav>
-        <input type="checkbox" id="menu-toggle-checkbox" />
-        <label for="menu-toggle-checkbox" class="menu-toggle-label"
-          >&#9776;</label
-        >
-        <ul class="menu">
-          <li><a href="./pages/galeria.html">Galería</a></li>
-          <li><a href="./pages/cuidados.html">Cuidados</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
-          <li><a href="./pages/info.html">Info</a></li>
-          <li><a href="./pages/aboutTapi.html">Sobre Tapi</a></li>
-        </ul>
-      </nav>
+<nav class="header__header-nav">
+  <input type="checkbox" id="menu-toggle-checkbox" />
+  <label for="menu-toggle-checkbox" class="menu-toggle-label">&#9776;</label>
+  <ul class="header-nav-ul">
+    <li><a href="./pages/galeria.html">Galería</a></li>
+    <li><a href="./pages/cuidados.html">Cuidados</a></li>
+    <li><a href="./pages/contacto.html">Contacto</a></li>
+    <li><a href="./pages/info.html">Info</a></li>
+    <li><a href="./pages/aboutTapi.html">Sobre Tapi</a></li>
+  </ul>
+</nav>
     </header>
-
     <section class="middle__index background">
       <article class="border__section-media__article">
         <a href="./pages/contacto.html">
-          <img src="./assets/img/imagen1.jpg" alt="Tatuaje1" />
+          <img src="./assets/img/imagen1.jpg"
+            alt="Tatuaje1"
+          />
         </a>
-        <a href="./pages/cuidados.html">
-          <img src="./assets/img/imagen2.png" alt="Tatuaje2" />
+        <a  href="./pages/cuidados.html">
+          <img
+            src="./assets/img/imagen2.png"
+            alt="Tatuaje2"
+          />
         </a>
-        <a href="./pages/galeria.html">
-          <img src="./assets/img/imagen3.jpg" alt="Tatuaje3" />
+        <a  href="./pages/galeria.html">
+          <img
+            src="./assets/img/imagen3.jpg"
+            alt="Tatuaje3"
+          />
         </a>
-        <a href="./pages/aboutTapi.html">
-          <img src="./assets/img/imagen4.png" alt="Tatuaje1" />
+        <a  href="./pages/aboutTapi.html">
+          <img
+            src="./assets/img/imagen4.png"
+            alt="Tatuaje1"
+          />
         </a>
-        <a href="./pages/galeria.html">
-          <img src="./assets/img/imagen5.png" alt="Tatuaje1" />
+        <a  href="./pages/galeria.html">
+          <img
+            src="./assets/img/imagen5.png"
+            alt="Tatuaje1"
+          />
         </a>
-        <a href="./pages/contacto.html">
-          <img src="./assets/img/imagen6.png" alt="Tatuaje1" />
+        <a  href="./pages/contacto.html">
+          <img
+            src="./assets/img/imagen6.png"
+            alt="Tatuaje1"
+          />
         </a>
       </article>
     </section>
-    <footer>
-      <h4>
+    <footer class="footer">
+      <h4 class="footer-h4">
         <a href="./pages/info.html">Preguntas Frecuentes</a>
       </h4>
-      <h4 class="ubicacion">
-        <span class="ubicacion-icon">&#x1F4CD;</span
+      <h4 class="footer-h4">
+        <span class="footer-h4__icon">&#x1F4CD;</span
         ><a href="./pages/contacto.html">Ubicación: Zona tres cruces</a>
       </h4>
     </footer>

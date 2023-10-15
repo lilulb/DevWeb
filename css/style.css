@@ -1,190 +1,273 @@
-/*Estilo fuente general*/
-@font-face {
-  font-family: 'lato';
-  src: url(../assets/Fonts/Lato-Bold.ttf);
-}
-
-/* Ejemplo de reset de CSS */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: 'latolihi', sans-serif;
-  background-color: rgba(0, 0, 0, 0.828);
-}
-
-.background {
-  background-image: url('../assets/img/fondoRestBodi2.png');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-
-.middle {
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+/*Estilos del footer */
+.footer {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-image: url("../assets/img/fondoRestBodi2.png");
+  height: 5vh;
+  border-top: 2px solid rgba(8, 187, 241, 0.2);
+  box-shadow: 0px -5px 5px rgba(8, 187, 241, 0.486);
+}
+.footer a {
+  display: inline;
+  color: rgb(60, 206, 251);
+  font-family: "Nanum gotic", sans-serif, 800;
+  font-size: 0.625;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-weight: 400;
 }
 
-/* Estilos Header ------------------------------------------------------------*/
-header {
+.ubicacion-icon {
+  margin-right: 5px;
+}
+
+.ubicacion {
+  display: inline-block;
+}
+
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+.header {
   width: 100%;
-  max-width: 2000px;
+  max-width: 125em;
   margin: 0 auto;
   height: 25vh;
-  background-image: url('../assets/img/fondoTop.jpg');
+  background-image: url("../assets/img/fondoTop.jpg");
   background-size: cover;
   background-position: center;
-  padding: 0px;
   position: relative;
   text-align: center;
-  box-shadow: 2px 2px 4px #41d5ef9a;
+  box-shadow: 2px 2px 4px rgba(65, 213, 239, 0.6039215686);
 }
 
 /* Estilos para video del banner */
-.video-contenedor {
+.header__div-video {
   height: 25vh;
 }
-
-.video-superpuesto {
+.header__div-video .div-video__video {
   width: 100%;
   height: 100%;
 }
+
 /* Estilo h1*----------------------------------------*/
 h1 {
-  font-family: 'lato';
-  color: #f737a4c9;
+  font-family: "Nanum gotic", sans-serif, 800;
+  color: hsla(313, 93%, 48%, 0.788);
   font-size: 4rem;
+  font-weight: 800;
   letter-spacing: 6px;
   padding: 10px;
   line-height: 21vh;
   margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.722), 0 0 20px #f6229ab0,
-    0 0 30px #f5048db0;
+  text-shadow: 0 0 10px rgba(64, 11, 44, 0.722);
   z-index: 2;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
 }
-
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    font-size: 1.5rem;
     line-height: 22vh;
+    letter-spacing: 2px;
   }
 }
 
 /* Fin estilo h1*----------------------------------------*/
-
 /* Logos redes */
-.logos {
+.header__div-logos {
   position: absolute;
-  top: 20px;
-  right: 90px;
+  top: 20%;
+  right: 6%;
 }
-
-.logos a i {
-  font-size: 30px;
+.header__div-logos .div-logos__a {
+  font-size: 1.8rem;
   color: #f4d721;
-  margin-right: 10px;
+  letter-spacing: 2px;
+  padding: 3%;
+}
+@media (max-width: 767px) {
+  .header__div-logos {
+    right: 29px;
+  }
+}
+@media (max-width: 480px) {
+  .header__div-logos {
+    right: 8px;
+  }
 }
 
-/* FIN header --------------------------------------------------------------- */
-
-/* Estilos menú desplegable  ------------------------------------------------ */
-nav {
+/* Fin estilo logos redes *----------------------------------*/
+/* Estilos menú desplegable*/
+.header__header-nav {
   position: absolute;
   bottom: 10px;
   right: 80px;
-  background-color: #a204a27e;
+  background-color: rgba(162, 4, 162, 0.4941176471);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.828);
   border-radius: 5px;
   z-index: 2;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
-
 @media (max-width: 767px) {
-  .logos {
-    right: 29px;
-  }
-
-  nav {
+  .header__header-nav {
     right: 31px;
   }
 }
-
 @media (max-width: 480px) {
-  .logos {
-    right: 8px;
-  }
-
-  nav {
+  .header__header-nav {
     right: 15px;
   }
 }
 
+/*---------------------------------*/
 .menu-toggle-label {
-  font-size: 25px;
+  font-size: 2rem;
   cursor: pointer;
   padding: 10px 40px;
+  color: rgb(51, 202, 248);
 }
 
 /* Icono de menú */
-label[for='menu-toggle-checkbox'] {
-  font-family: 'lato light';
-  font-weight: lighter;
+label[for=menu-toggle-checkbox] {
+  font-family: "Nanum gotic", sans-serif, 800;
+  font-weight: 400;
   letter-spacing: 2px;
-  font-size: 30px;
+  font-size: 1.8rem;
   cursor: pointer;
   padding: 0px 30px;
   color: rgb(51, 202, 248);
 }
 
-/* Lista de menú */
-.menu {
+@media (max-width: 767px) {
+  label[for=menu-toggle-checkbox] {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  label[for=menu-toggle-checkbox] {
+    font-size: 20px;
+    padding: 0px 25px;
+  }
+}
+/* Estilos para la lista del menú */
+.header-nav-ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #a204a27e;
+  background-color: rgba(162, 4, 162, 0.4941176471);
   position: absolute;
-  bottom: -265px;
+  bottom: -639%;
   right: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
   border-radius: 5px;
-  width: 131%;
+  width: 160%;
 }
 
-.menu li {
+@media (max-width: 767px) {
+  .header-nav-ul {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    width: 120%;
+  }
+}
+.header-nav-ul li {
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
-input[type='checkbox'] {
+input[type=checkbox] {
   position: absolute;
   opacity: 0;
 }
 
-input[type='checkbox']:checked ~ .menu {
+input[type=checkbox]:checked ~ .header-nav-ul {
   opacity: 1;
   pointer-events: auto;
 }
 
-.menu li:not(:last-child) {
+.header-nav-ul li:not(:last-child) {
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.menu a {
+.header-nav-ul a {
+  color: rgb(51, 202, 248);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+  position: relative;
+  display: block;
+  font-weight: 400;
+}
+.header-nav-ul a:hover {
+  color: rgb(51, 202, 248);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .header-nav-ul a {
+    font-size: x-small;
+    padding: 17px 14px;
+  }
+}
+@media (max-width: 767px) {
+  .header-nav-ul a {
+    padding: 13px 15px;
+    font-size: small;
+  }
+}
+.header-nav-ul a {
   color: rgb(51, 202, 248);
   text-decoration: none;
   padding: 10px 20px;
@@ -193,93 +276,137 @@ input[type='checkbox']:checked ~ .menu {
   position: relative;
   display: block;
 }
-.menu a:hover {
+.header-nav-ul a .header-nav-ul a :hover {
   color: rgb(51, 202, 248);
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
-/* FIN Estilos menú desplegable ---------------------------------------------- */
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+body {
+  font-family: "Nanum gotic", sans-serif, 800;
+  background-color: rgba(0, 0, 0, 0.828);
+}
 
-/* ------------------------- INDEX -------------------------------------------------------------- */
-/* Estilos para el contenido "middle" */
-.middle__index {
+/* Estilos  section grales */
+.background {
+  background-image: url("../assets/img/fondoRestBodi2.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: center;
+}
+
+/* Estilos  article */
+article {
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 6px rgba(9, 189, 221, 0.3529411765);
+}
+
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+/* Estilos para la página de Contacto */
+.middle__contacto {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
-/* Estilos generales para los articles */
 article {
   width: 50%;
-  background-color: rgba(255, 0, 255, 0.18);
-  border-radius: 10px;
+}
+
+.contacto {
+  width: 800px;
+  height: 600px;
+  margin: 20px auto;
   padding: 10px;
   overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
-  box-shadow: 6px 6px 6px #09bddd5a;
-  margin-left: 0;
+  /* Estilos para las celdas de la tabla */
+  /* Estilos para los iconos */
+  /* Estilos para el párrafo de texto */
 }
-
-/* Estilos para los enlaces e imágenes en la seccion media INDEX */
-.border__section-media__article {
-  display: grid;
-  flex-direction: column;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+.contacto td {
+  padding: 5px;
+}
+.contacto a i {
+  font-size: 3rem;
+  color: #09bddd;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 2.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+.contacto a i:hover {
+  transform: scale(1.2); /* Cambia el tamaño del ícono al 120% en hover */
+}
+.contacto .redeesContacto {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+.contacto p {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  font-family: "lato";
+  color: rgba(244, 216, 33, 0.8039215686);
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.contacto .ubicacionMapa {
+  width: 490px;
+  height: 340px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 0, 255, 0.5);
   border-radius: 10px;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: rgba(255, 0, 255, 0.18);
-  box-shadow: 6px 6px 6px #09bddd5a;
-  margin: 70px auto;
-  width: 80%;
   overflow: hidden;
-  position: initial;
-  gap: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.533);
+  display: inline-block;
+  vertical-align: top;
 }
 
-@media (max-width: 767px) {
-  body {
-    font-size: 18px;
-  }
-
-  .border__section-media__article {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    width: 86%;
-  }
-
-  .border__section-media__article img {
-    width: 86%;
-    height: 240px;
-  }
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+.middle__galeria {
+  padding: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 18px;
-  }
-
-  .border__section-media__article {
-    flex-direction: column;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    width: 86%;
-    height: initial;
-  }
-
-  .border__section-media__article img {
-    width: 86%;
-    height: 240px;
-  }
-}
-/* ---------------------------------------------------------------------- */
-/* ---------------------------------- GALERIA -------------------------------------------------*/
-.middle {
-  padding: 30px;
-}
-.article {
+.galeria {
   padding: 20px;
   height: 440px;
 }
@@ -294,155 +421,127 @@ article {
 .carousel-inner {
   max-height: 400px;
 }
-
-.carousel-item.active {
+.carousel-inner .active {
   display: flex;
   justify-content: space-around;
 }
-
-/* Tamaño de las imágenes dentro del carrusel */
 .carousel-inner img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
+
 @media (max-width: 767px) {
   article {
     width: 70%;
   }
 }
-
 @media (max-width: 480px) {
   article {
     width: 80%;
   }
 }
-/* -----------------------------------------------------------------------------------------------*/
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+/* ---------------------------------INICIO------------------------------------------------------ */
+.middle__index {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
-/* ---------------------------------- ABOUT TAPI-------------------------------------------------*/
+article {
+  width: 50%;
+}
 
-article img {
-  width: 200px;
-  height: 200px;
-  margin: 20px;
-  border-radius: 10px;
+.border__section-media__article {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 1rem;
+  margin: 70px auto;
+  width: 65%;
+  overflow: hidden;
+  position: initial;
+  margin-top: 2%;
+}
+
+.border__section-media__article img {
+  width: 280px;
+  height: 280px;
+  margin: 10px;
+  border-radius: 5px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.828);
 }
-/* Estilo para el artículo de texto about tapi*/
-.texto {
-  font-family: 'lato' sa;
-  width: 45%;
-  text-align: justify;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  padding: 10px;
-  background-color: rgba(255, 0, 255, 0.18);
-  border-radius: 10px;
-  overflow-y: scroll;
-  max-height: 500px;
-  font-family: 'lato light';
-  color: #a9e8f4;
-}
 
-/* Estilo para el párrafo dentro de .texto */
-.texto p {
-  margin: 0 20px 20px 20px;
+@media (max-width: 767px) {
+  body {
+    font-size: 0.8rem;
+  }
+  .border__section-media__article {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 70%;
+  }
+  .border__section-media__article img {
+    width: 70%;
+    height: 20px;
+  }
 }
-
-/* Estilo para el div izquierdo de aboutTapi */
-.div-izquierdo {
-  width: 37%;
-  float: left;
-  padding: 10px;
-  background-color: rgba(255, 0, 255, 0.18);
-  border-radius: 10px;
-  max-height: 500px;
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+  .border__section-media__article {
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 86%;
+    height: initial;
+  }
+  .border__section-media__article img {
+    width: 86%;
+    height: 240px;
+  }
 }
-
-/* Estilo para el contenido del div izquierdo de aboutTapi*/
-.div-izquierdo img {
-  max-width: 96%;
-}
-/* -----------------------------------------------------------------------------------------------*/
-
-/* ---------------------------------- CONTACTO----------------------------------------------------*/
-
-/* Estilos para la página de Contacto */
-.contacto article {
-  width: 800px;
-  height: 600px;
-  margin: 20px auto;
-  background-color: rgba(255, 0, 255, 0.23);
-  border-radius: 10px;
-  padding: 10px;
-  overflow: hidden;
-  width: 48%;
-  margin: 14%;
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-
-/* Estilos para la tabla */
-.contacto table {
-  width: 100%;
-  text-align: center;
-}
-
-/* Estilos para las celdas de la tabla */
-.contacto td {
-  padding: 05px;
-}
-
-/* Estilos para los iconos */
-.contacto a i {
-  font-size: 30px;
-  color: #09bddd;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-/* Estilos para el párrafo de texto */
-.contacto p {
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 10px;
-  font-family: 'lato';
-  color: #f4d821cd;
-  letter-spacing: 2px;
-  line-height: 1.5;
-}
-
-/* Estilo del div del mapa */
-.ubicacionMapa {
-  width: 300px;
-  height: 200px;
-  box-sizing: border-box;
-  border: 1px solid rgba(255, 0, 255, 0.5);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.533);
-  display: inline-block;
-  vertical-align: top;
-}
-/* -----------------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------- */
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
 /* ---------------------------------- INFO -------------------------------------------------------*/
-
-/* Estilo para el título de los articles */
-article h2 {
-  font-family: 'latolighti', sans-serif;
-  color: #edd53ce8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  letter-spacing: 1.5;
+.middle__info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-/* Estilos para el artículo de preguntas frecuentes */
-.preguntas {
+.titulos-info {
+  font-family: "latolighti", sans-serif;
+  color: rgba(237, 213, 60, 0.9098039216);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 2;
+}
+
+.section-preguntasfrec {
+  float: left;
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+}
+
+.info-preguntas {
   width: 80%;
   background-color: rgba(255, 0, 255, 0.18);
   border-radius: 10px;
@@ -450,19 +549,15 @@ article h2 {
   overflow: hidden;
   box-sizing: border-box;
   margin-top: 42px;
-  box-shadow: 6px 6px 6px #09bddd5a;
+  box-shadow: 6px 6px 6px rgba(9, 189, 221, 0.3529411765);
 }
 
-/* Estilo para el section de preguntas frecuentes */
-.preguntas-section {
-  float: left;
-  width: 45%;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Estilo de la pregunta */
 .question-label {
   font-weight: bold;
   cursor: pointer;
@@ -474,48 +569,38 @@ article h2 {
   letter-spacing: 1.5;
 }
 
-.faq-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Cambiar el color de fondo al pasar el cursor */
 .question-label:hover {
   background-color: rgba(0, 0, 0, 0.325);
 }
-/* Ocultar las respuestas por defecto */
+
 .answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   color: #8dd4e0;
   padding: 10px;
-  font-family: 'latolighti', sans-serif;
+  font-family: "latolighti", sans-serif;
   line-height: 2.5;
   letter-spacing: 1.5;
 }
 
-/* Mostrar respuestas cuando la casilla de verificación está marcada */
 .question-input:checked + .question-label + .answer {
   max-height: 1000px;
   margin-top: 10px;
 }
 
-/* Estilos para el símbolo de alternancia */
 .question-label::before {
   content: none;
   display: inline-block;
   margin-right: 5px;
 }
 
-/* Cambiar el símbolo cuando la casilla de verificación está marcada */
 .question-input:checked + .question-label::before {
   content: none;
 }
 
 /* Estilos para el artículo de cotización */
-.cotizacion {
+.article-cotizacion {
   width: 45%;
   margin: 30px 1%;
   background-color: rgba(255, 0, 255, 0.18);
@@ -523,15 +608,11 @@ article h2 {
   padding: 10px;
   box-sizing: border-box;
 }
-
-/* Estilos para el formulario de cotización */
-form {
+.article-cotizacion form {
   margin-top: 20px;
 }
-
-/* Estilo para los nombres de los campos*/
-form label {
-  font-family: 'lato';
+.article-cotizacion form label {
+  font-family: "lato";
   color: #22d6f6;
   display: block;
   margin-bottom: 5px;
@@ -541,11 +622,9 @@ form label {
   clear: left;
   margin-left: 10px;
 }
-
-/* Estilo para los campos de*/
-form input[type='text'],
-form input[type='tel'],
-form input[type='email'] {
+.article-cotizacion form input[type=text],
+.article-cotizacion form input[type=tel],
+.article-cotizacion form input[type=email] {
   width: 50%;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -554,41 +633,36 @@ form input[type='email'] {
   line-height: 2;
   margin-top: 5px;
   margin-right: 40px;
-  background-color: #cccccc83;
+  background-color: rgba(204, 204, 204, 0.5137254902);
 }
-
-/* Estilos para el cuadro de texto de la consulta */
-form textarea {
+.article-cotizacion form textarea {
   width: 50%;
   height: 50%;
   padding: 2px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  background-color: #cccccc83;
+  background-color: rgba(204, 204, 204, 0.5137254902);
   border-radius: 10px;
   float: right;
   line-height: 1;
   margin-right: 40px;
 }
-
-/* Estilos para seccion subir imagnen*/
-form input[type='file'] {
+.article-cotizacion form input[type=file] {
   width: 29%;
   height: auto;
   padding: 5px;
   border: 1px solid #ccc;
-  background-color: #cccccc83;
+  background-color: rgba(204, 204, 204, 0.5137254902);
   border-radius: 10px;
   margin-right: 59px;
 }
-
-form input[type='file']:hover {
-  background-color: #0e748683;
+.article-cotizacion form input[type=file]:hover {
+  background-color: rgba(14, 116, 134, 0.5137254902);
 }
 
 /* Estilos para el botón en la sección de cotización */
-.cotizacion button {
-  font-family: 'lato';
+.datos-button-cotizar {
+  font-family: "lato";
   font-size: small;
   letter-spacing: 1.5px;
   background-color: rgba(255, 0, 255, 0.5);
@@ -605,32 +679,24 @@ form input[type='file']:hover {
   margin-right: 40px;
   margin-top: 180spx;
 }
-/* -----------------------------------------------------------------------------------------------*/
-/* ---------------------------------- FOOTER -----------------------------------------------------*/
 
-/* Estilos del footer */
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(16, 2, 16, 0.388);
-  height: 05vh;
-  border-top: 2px solid rgba(8, 187, 241, 0.2);
-  box-shadow: 0px -5px 05px rgba(8, 187, 241, 0.486);
+@media (max-width: 480px) {
+  .middle__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+  }
+  .section-preguntasfrec,
+  .article-cotizacion {
+    width: 90%;
+    margin: 15px auto;
+    float: none;
+  }
+  body {
+    font-size: 14px;
+  }
 }
 
-footer a {
-  display: inline;
-  color: rgb(60, 206, 251);
-  font-family: 'lato';
-  font-size: small;
-  text-decoration: none;
-}
-.ubicacion-icon {
-  margin-right: 5px;
-}
-.ubicacion {
-  display: inline-block;
-}
+/*# sourceMappingURL=style.css.map */
