@@ -58,14 +58,15 @@ h1 {
 /* Logos redes */
 .header__div-logos {
   position: absolute;
-  top: 20%;
-  right: 6%;
+  top: 5%;
+  right: 4%;
+  display: flex;
 
   .div-logos__a {
-    font-size: $tamano5;
+     font-size: $tamano5;
     color: map-get($colores, 'yelow');
     letter-spacing: $medio;
-    padding:3%;
+    padding: 10px;
   }
 
   @media (max-width: 767px) {
@@ -85,7 +86,7 @@ h1 {
 /* Estilos menú desplegable*/
 .header__header-nav {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 80px;
   background-color: map-get($colores, 'background-rosa');
   box-shadow: 0px 0px 10px map-get($colores, 'background');

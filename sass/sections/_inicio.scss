@@ -9,7 +9,7 @@
 }
 
 article {
-  width: $ancho/2;
+  width: $ancho div 2;
 }
 
 .border__section-media__article {
@@ -26,8 +26,9 @@ article {
 }
 
 .border__section-media__article img {
-  width: 280px;
-  height: 280px;
+  width: 90%;
+  height: auto;
+  max-width: 280px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.828);
@@ -45,8 +46,10 @@ article {
   }
 
   .border__section-media__article img {
-    width: 70%;
-    height: 20px;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    min-height: 90%;
   }
 }
 
