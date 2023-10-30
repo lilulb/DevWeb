@@ -1,125 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tapi Tattoo</title>
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="../assets/img/LogoTapi.png"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__header-div-video">
-        <video autoplay loop muted playsinline class="header-div-video__video">
-          <source
-            src="./assets/video/LogoFloristaCircularBlancoNegro.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
-      <div class="header__header-div-logos">
-        <a class="header-div-logos__a" href="https://www.facebook.com/"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a class="header-div-logos__a" href="https://www.instagram.com/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-      <nav class="header__header-nav">
-        <input
-          class="header-nav__input"
-          type="checkbox"
-          id="menu-toggle-checkbox"
-        />
-        <label for="menu-toggle-checkbox" class="input__menu-toggle-label"
-          >&#9776;</label
-        >
-        <ul class="header-nav__header-nav-ul">
-          <li>
-            <a class="header-nav-ul__li" href="./pages/galeria.html">Galería</a>
-          </li>
-          <li>
-            <a class="header-nav-ul__li" href="./pages/cuidados.html"
-              >Cuidados</a
-            >
-          </li>
-          <li>
-            <a class="header-nav-ul__li" href="./pages/contacto.html"
-              >Contacto</a
-            >
-          </li>
-          <li>
-            <a class="header-nav-ul__li" href="./pages/info.html">Info</a>
-          </li>
-          <li>
-            <a class="header-nav-ul__li" href="./pages/aboutTapi.html"
-              >Sobre Tapi</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section class="section-middle">
-      <div class="section-middle__middle-about-div-i">
-        <img
-          clas="middle-about-div-i"
-          src="../assets/img/collage.png"
-          alt="Dibujo esquizoide"
-        />
-      </div>
-      <article class="section-middle__middle-article-about">
-        <p class="middle-article-about__texto">
-          Desde que era una joven apasionada por el arte, siempre supe que mi
-          vida estaría ligada a la creatividad. Cada línea, cada sombra, y cada
-          pincelada eran una expresión de mi ser. Sin embargo, mi camino hacia
-          la verdadera realización artística tomó un giro inesperado, pero
-          increíblemente gratificante.<br />
-          Después de explorar diferentes caminos, me embarqué en un emocionante
-          viaje hacia el mundo del tatuaje. Como tatuadora joven y apasionada,
-          encontré un nicho acogedor donde mi amor por el arte se fusionó con la
-          expresión personal de los demás. Cada día, me levanto inspirada y
-          lista para crear obras de arte que vivirán en la piel de mis clientes
-          para siempre.<br />
-          Este cambio de carrera y de rumbo ha sido una revelación. Estoy en
-          constante aprendizaje, buscando nuevas técnicas y estilos para ofrecer
-          lo mejor a mis clientes. No solo tatúo, sino que también canalizo mi
-          creatividad en dibujos y diseños de póster, utilizando una variedad de
-          técnicas que amplían mi horizonte artístico.<br />
-          Mi recorrido en el mundo del tatuaje me ha llevado a lugares
-          insospechados. Cada experiencia, cada cultura, y cada historia que he
-          encontrado en este viaje me inspiran a ser una tatuadora aún mejor.
-          Mis clientes confían en mí para que sus ideas y emociones se
-          conviertan en obras de arte en sus cuerpos.<br />
-          Soy una fanática de los colores y me encanta experimentar con
-          diferentes estilos. Aunque tengo experiencia en varios estilos, estoy
-          en constante evolución para desarrollar uno propio que sea una
-          verdadera expresión de mi creatividad y visión artística. Mi pasión
-          por el arte y el tatuaje es un viaje sin fin. Cada día, me despierto
-          con el deseo de superar mis límites y crear tatuajes que cuenten
-          historias únicas en la piel de las personas. Para mí, no es solo un
-          trabajo, es una forma de vida, una pasión ardiente que sigue ardiendo
-          en cada trazo.
-        </p>
-      </article>
-    </section>
-    <footer class="footer">
-      <h4 class="footer-h4">
-        <a href="./pages/info.html">Preguntas Frecuentes</a>
-      </h4>
-      <h4 class="footer-h4">
-        <span class="footer-h4__icon">&#x1F4CD;</span
-        ><a href="./pages/contacto.html">Ubicación: Zona tres cruces</a>
-      </h4>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/bc67ebf33e.js"
-      rossorigin="anonymous"
-    ></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tapi Tattoo</title>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/LogoTapi.png" type="image/x-icon" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__header-div-video">
+      <video autoplay loop muted playsinline class="header-div-video__video">
+        <source src="./assets/video/LogoFloristaCircularBlancoNegro.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="header__header-div-logos">
+      <a class="header-div-logos__a" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+      <a class="header-div-logos__a" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <nav class="header__header-nav">
+      <input class="header-nav__input" type="checkbox" id="menu-toggle-checkbox" />
+      <label for="menu-toggle-checkbox" class="input__menu-toggle-label">&#9776;</label>
+      <ul class="header-nav-ul">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./cuidados.html">Cuidados</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="./info.html">Info</a></li>
+        <li><a href="./aboutTapi.html">Sobre Tapi</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="section-middle">
+    <div class="section-middle__middle-about-div-i">
+      <img clas="middle-about-div-i" src="../assets/img/collage.png" alt="Dibujo esquizoide" />
+    </div>
+    <article class="section-middle__middle-article-about">
+      <p class="middle-article-about__texto">
+        Desde que era una joven apasionada por el arte, siempre supe que mi
+        vida estaría ligada a la creatividad. Cada línea, cada sombra, y cada
+        pincelada eran una expresión de mi ser. Sin embargo, mi camino hacia
+        la verdadera realización artística tomó un giro inesperado, pero
+        increíblemente gratificante.<br />
+        Después de explorar diferentes caminos, me embarqué en un emocionante
+        viaje hacia el mundo del tatuaje. Como tatuadora joven y apasionada,
+        encontré un nicho acogedor donde mi amor por el arte se fusionó con la
+        expresión personal de los demás. Cada día, me levanto inspirada y
+        lista para crear obras de arte que vivirán en la piel de mis clientes
+        para siempre.<br />
+        Este cambio de carrera y de rumbo ha sido una revelación. Estoy en
+        constante aprendizaje, buscando nuevas técnicas y estilos para ofrecer
+        lo mejor a mis clientes. No solo tatúo, sino que también canalizo mi
+        creatividad en dibujos y diseños de póster, utilizando una variedad de
+        técnicas que amplían mi horizonte artístico.<br />
+        Mi recorrido en el mundo del tatuaje me ha llevado a lugares
+        insospechados. Cada experiencia, cada cultura, y cada historia que he
+        encontrado en este viaje me inspiran a ser una tatuadora aún mejor.
+        Mis clientes confían en mí para que sus ideas y emociones se
+        conviertan en obras de arte en sus cuerpos.<br />
+        Soy una fanática de los colores y me encanta experimentar con
+        diferentes estilos. Aunque tengo experiencia en varios estilos, estoy
+        en constante evolución para desarrollar uno propio que sea una
+        verdadera expresión de mi creatividad y visión artística. Mi pasión
+        por el arte y el tatuaje es un viaje sin fin. Cada día, me despierto
+        con el deseo de superar mis límites y crear tatuajes que cuenten
+        historias únicas en la piel de las personas. Para mí, no es solo un
+        trabajo, es una forma de vida, una pasión ardiente que sigue ardiendo
+        en cada trazo.
+      </p>
+    </article>
+  </section>
+  <footer class="footer">
+    <h4 class="footer-h4">
+      <a href="./pages/info.html">Preguntas Frecuentes</a>
+    </h4>
+    <h4 class="footer-h4">
+      <span class="footer-h4__icon">&#x1F4CD;</span><a href="./pages/contacto.html">Ubicación: Zona tres cruces</a>
+    </h4>
+  </footer>
+  <script src="https://kit.fontawesome.com/bc67ebf33e.js" rossorigin="anonymous"></script>
+</body>
+
 </html>

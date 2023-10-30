@@ -1,11 +1,11 @@
 @import '../functions/mixins';
 @import '../base/fonts';
 @import '../base/variables';
-@import'../base/colors';
+@import '../base/colors';
 
 /* ---------------------------------INICIO------------------------------------------------------ */
 .middle__index {
-@include flex-center-center
+  @include flex-center-center;
 }
 
 article {
@@ -19,7 +19,7 @@ article {
   grid-template-rows: repeat(2, 1fr);
   padding: 1rem;
   margin: 70px auto;
-  width: $ancho * 0.65;
+  // width: $ancho * 0.65;
   overflow: hidden;
   position: initial;
   margin-top: 2%;

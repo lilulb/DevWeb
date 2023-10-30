@@ -1,95 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tapi Tattoo</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="shortcut icon"href="../assets/img/LogoTapi.png"type="image/x-icon"/>
-  </head>
-  <body>
-      <header class="header">
-        <h1> Informaciòn de interes </h1>
-        <div class="header__div-logos">
-        <a class="div-logos__a" href="https://www.facebook.com/"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a class="div-logos__a" href="https://www.instagram.com/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-      <nav class="header__header-nav">
-        <input  type="checkbox" id="menu-toggle-checkbox" />
-        <label for="menu-toggle-checkbox" class="input__menu-toggle-label"
-          >&#9776;</label
-        >
-        <ul class="header-nav-ul">
-          <li><a href="./pages/galeria.html">Galería</a></li>
-          <li><a href="./pages/cuidados.html">Cuidados</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
-          <li><a href="./pages/info.html">Info</a></li>
-          <li><a href="./pages/aboutTapi.html">Sobre Tapi</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tapi Tattoo</title>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../assets/img/LogoTapi.png" type="image/x-icon" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>Informaciòn de interes</h1>
+    <div class="header__div-logos">
+      <a class="div-logos__a" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+      <a class="div-logos__a" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <nav class="header__header-nav">
+      <input type="checkbox" id="menu-toggle-checkbox" />
+      <label for="menu-toggle-checkbox" class="input__menu-toggle-label">&#9776;</label>
+      <ul class="header-nav-ul">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./cuidados.html">Cuidados</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="./aboutTapi.html">Sobre Tapi</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="middle__info background">
+    <section class="section-preguntasfrec">
+      <article class="info-preguntas">
+        <h2 class="titulos-info">Preguntas Frecuentes</h2>
+        <ul class="faq-list">
+          <li>
+            <input type="checkbox" class="question-input" id="question-1" />
+            <label class="question-label" for="question-1">¿Como reservo mi hora?</label>
+            <div class="answer">
+              <p>
+                Reservar tu hora es sencillo. Solo sigue estos tres pasos:<br />
+                Contáctanos a través de WhatsApp o completa nuestro formulario
+                de cotización. Juntos definiremos el diseño de tu tatuaje y la
+                fecha que mejor se ajuste a tu agenda. Para asegurar tu cita,
+                solo necesitas realizar una seña del 50%. ¡Y listo! Estarás un
+                paso más cerca de lucir tu nuevo tatuaje.
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="checkbox" class="question-input" id="question-2" />
+            <label class="question-label" for="question-2">¿Cuales son las formas de pago?</label>
+            <div class="answer">
+              <p>
+                Ofrecemos varias opciones para que elijas la que más te
+                convenga:<br />
+                Transferencia Bancaria: Paga de forma segura y conveniente a
+                través de una transferencia bancaria.<br />
+                Efectivo: Aceptamos pagos en efectivo para tu comodidad.<br />
+                Mercado Pago: También puedes optar por la plataforma de
+                Mercado Pago para una experiencia de pago rápida y segura.<br />
+                Elige la opción que mejor se adapte a tus preferencias y
+                disfruta de tu tatuaje sin preocupaciones.
+              </p>
+            </div>
+          </li>
         </ul>
-      </nav>
-    </header>
-    <section class="middle__info background">
-      <section class="section-preguntasfrec">
-        <article class="info-preguntas">
-            <h2 class="titulos-info">Preguntas Frecuentes</h2>
-            <ul class="faq-list">
-                <li>
-                    <input type="checkbox" class="question-input" id="question-1">
-                    <label class="question-label" for="question-1">¿Como reservo mi hora?</label>
-                    <div class="answer"><p>Reservar tu hora es sencillo. Solo sigue estos tres pasos:<br>
-                    Contáctanos a través de WhatsApp o completa nuestro formulario de cotización. Juntos definiremos el diseño de tu tatuaje y la fecha que mejor se ajuste a tu agenda. Para asegurar tu cita, solo necesitas realizar una seña del 50%. ¡Y listo! Estarás un paso más cerca de lucir tu nuevo tatuaje.</p>
-                    </div>
-                </li>
-                <li>
-                    <input type="checkbox" class="question-input" id="question-2">
-                    <label class="question-label" for="question-2">¿Cuales son las formas de pago?</label>
-                    <div class="answer"><p>Ofrecemos varias opciones para que elijas la que más te convenga:<br>
-                    Transferencia Bancaria: Paga de forma segura y conveniente a través de una transferencia bancaria.<br>
-                    Efectivo: Aceptamos pagos en efectivo para tu comodidad.<br>
-                    Mercado Pago: También puedes optar por la plataforma de Mercado Pago para una experiencia de pago rápida y segura.<br>
-                    Elige la opción que mejor se adapte a tus preferencias y disfruta de tu tatuaje sin preocupaciones.</p>
-                    </div>
-                </li>
-            </ul>
-        </article>
-       </section>
-       <article class="article-cotizacion">
-        <h2 class="titulos-info">Solicitar Cotización</h2>
-        <form class="cotizacion__form" action="procesar_cotizacion.php" method="post" enctype="multipart/form-data">
-          <label class="nombre-campos" for="nombre"><p></p>Nombre:</label>
-          <input class="datos-campos" type="text" id="nombre" name="nombre" required>
-    
-          <label class="nombre-campos" for="telefono">Teléfono:</label>
-          <input class="datos-campos" type="tel" id="telefono" name="telefono" required>
-    
-          <label class="nombre-campos" for="email">Correo Electrónico:</label>
-          <input class="datos-campos" type="email" id="email" name="email" required>
-    
-          <label class="nombre-campos" for="consulta">Consulta:</label>
-          <textarea id="consulta" name="consulta" rows="4" required></textarea>
-    
-          <label class="nombre-campos" class="upload"for="imagen">Subir Imagen: </label>
-          <input class="datos-campos" type="file" id="imagen" name="imagen" accept="image/*" placeholder="Referencia">
-    
-          <button class="datos-buttom-cotizar" type="submit"> Cotizar </button>
-        </form>
       </article>
     </section>
-    <footer class="footer">
-      <h4 class="footer-h4">
-        <a href="./pages/info.html">Preguntas Frecuentes</a>
-      </h4>
-      <h4 class="footer-h4">
-        <span class="footer-h4__icon">&#x1F4CD;</span
-        ><a href="./pages/contacto.html">Ubicación: Zona tres cruces</a>
-      </h4>
-    </footer>
-    <script src="https://kit.fontawesome.com/bc67ebf33e.js"crossorigin="anonymous"></script>
-  </body>
+    <article class="article-cotizacion">
+      <h2 class="titulos-info">Solicitar Cotización</h2>
+      <form class="cotizacion__form" action="procesar_cotizacion.php" method="post" enctype="multipart/form-data">
+        <label class="nombre-campos" for="nombre">
+          <p></p>
+          Nombre:
+        </label>
+        <input class="datos-campos" type="text" id="nombre" name="nombre" required />
+
+        <label class="nombre-campos" for="telefono">Teléfono:</label>
+        <input class="datos-campos" type="tel" id="telefono" name="telefono" required />
+
+        <label class="nombre-campos" for="email">Correo Electrónico:</label>
+        <input class="datos-campos" type="email" id="email" name="email" required />
+
+        <label class="nombre-campos" for="consulta">Consulta:</label>
+        <textarea id="consulta" name="consulta" rows="4" required></textarea>
+
+        <label class="nombre-campos" class="upload" for="imagen">Subir Imagen:
+        </label>
+        <input class="datos-campos" type="file" id="imagen" name="imagen" accept="image/*" placeholder="Referencia" />
+
+        <button class="datos-buttom-cotizar" type="submit">Cotizar</button>
+      </form>
+    </article>
+  </section>
+  <footer class="footer">
+    <h4 class="footer-h4">
+      <a href="./pages/info.html">Preguntas Frecuentes</a>
+    </h4>
+    <h4 class="footer-h4">
+      <span class="footer-h4__icon">&#x1F4CD;</span><a href="./pages/contacto.html">Ubicación: Zona tres cruces</a>
+    </h4>
+  </footer>
+  <script src="https://kit.fontawesome.com/bc67ebf33e.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

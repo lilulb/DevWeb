@@ -3,16 +3,30 @@
 @import '../base/variables';
 @import '../base/colors';
 
-
-.middle__galeria{
+.middle__galeria {
   padding: 4.5rem;
-  @include flex-center-center
+  @include flex-center-center;
 }
+/* -------- Galeria------*/
 .galeria {
-  padding: 20px;
-  height: 440px;
+  padding: 50px;
+  height: 600px;
 }
 
+@media (max-width: 767px) {
+  .galeria {
+    padding: 25px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    padding: 10px;
+    height: auto;
+  }
+}
+/*--------------------------*/
 /* Ancho del carrusel */
 .carousel {
   max-width: 800px;
@@ -21,18 +35,18 @@
 
 /* Altura del carrusel */
 .carousel-inner {
-  max-height: 400px;
+  max-height: 500px;
 
   .active {
-  display: flex;
-  justify-content: space-around;
- }
+    display: flex;
+    justify-content: space-around;
+  }
 
   img {
-  max-width: 80%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
   }
- }
+}
 
 @media (max-width: 767px) {
   article {
@@ -42,6 +56,6 @@
 
 @media (max-width: 480px) {
   article {
-    width: 80%;
+    width: 100%;
   }
 }
