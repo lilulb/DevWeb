@@ -1,7 +1,7 @@
 @import '../functions/mixins';
 @import '../base/fonts';
 @import '../base/variables';
-@import'../base/colors';
+@import '../base/colors';
 
 .header {
   width: $ancho;
@@ -13,7 +13,13 @@
   box-shadow: map-get($sombras-color, 'header-shadow');
 }
 
-/* Estilos para video del banner */
+.header__content {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Estilos para video del banner en la página de inicio */
 .header__div-video {
   height: $height-header;
 
@@ -23,7 +29,7 @@
   }
 }
 
-/* Estilo h1*----------------------------------------*/
+/* Estilo h1 */
 h1 {
   font-family: $font1;
   color: map-get($colores, 'h1-color');
@@ -37,23 +43,18 @@ h1 {
   z-index: 2;
 
   @media (max-width: 767px) {
-    & {
-      @include flex-center-center;
-      font-size: $tamano6;
-      letter-spacing: $medio;
-    }
+    @include flex-center-center;
+    font-size: $tamano6;
+    letter-spacing: $medio;
   }
 
   @media (max-width: 480px) {
-    & {
-      @include flex-row-center;
-      font-size: $tamano2;
-      line-height: 22vh;
-      letter-spacing: $medio;
-    }
+    @include flex-row-center;
+    font-size: $tamano2;
+    line-height: 22vh;
+    letter-spacing: $medio;
   }
 }
-/* Fin estilo h1*----------------------------------------*/
 
 /* Logos redes */
 .header__div-logos {
@@ -63,64 +64,57 @@ h1 {
   display: flex;
 
   .div-logos__a {
-     font-size: $tamano5;
+    font-size: $tamano5;
     color: map-get($colores, 'yelow');
     letter-spacing: $medio;
     padding: 10px;
   }
 
   @media (max-width: 767px) {
-    & {
-      right: 29px;
-    }
+    right: 29px;
   }
 
   @media (max-width: 480px) {
-    & {
-      right: 8px;
-    }
+    right: 8px;
   }
 }
-/* Fin estilo logos redes *----------------------------------*/
 
-/* Estilos menú desplegable*/
+/* Estilos menú desplegable */
 .header__header-nav {
   position: absolute;
-  bottom: 5px;
-  right: 80px;
+  top: 200px;
+  right: 75px;
   background-color: map-get($colores, 'background-rosa');
   box-shadow: 0px 0px 10px map-get($colores, 'background');
   border-radius: 5px;
   z-index: 2;
 
   @media (max-width: 767px) {
-    & {
-      right: 31px;
-    }
+    right: 31px;
   }
+
   @media (max-width: 480px) {
-    & {
-      right: 15px;
-    }
+    right: 15px;
   }
 }
-/*---------------------------------*/
+
+/* Menú toggle label */
 .menu-toggle-label {
   font-size: $tamano6;
   cursor: pointer;
   padding: 10px 40px;
- color: map-get($colores, 'turquesa');
+  color: map-get($colores, 'turquesa');
 }
 
-  /* Icono de menú */
-  label[for='menu-toggle-checkbox'] {
-    font-family: $font1;
-    font-weight: $font-wei-1;
-    letter-spacing: $medio;
-    font-size: $tamano5;
-    cursor: pointer;
-    padding: 0px 30px;
-    color: map-get($colores, 'turquesa');  
+/* Icono de menú */
+label[for='menu-toggle-checkbox'] {
+  font-family: $font1;
+  font-weight: $font-wei-1;
+  letter-spacing: $medio;
+  font-size: $tamano5;
+  cursor: pointer;
+  padding: 0px 30px;
+  color: map-get($colores, 'turquesa');
 }
 
 @media (max-width: 767px) {
@@ -128,6 +122,7 @@ h1 {
     font-size: 25px;
   }
 }
+
 @media (max-width: 480px) {
   label[for='menu-toggle-checkbox'] {
     font-size: 20px;
@@ -140,15 +135,82 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: map-get($colores, 'background-rosa');
-  position: absolute;
-  bottom: -639%;
-  right: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 74%;
+  background-color: map-get($colores, 'background-rosa2');
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
   border-radius: $bord-r1;
-  width: $ancho + 60;
+  z-index: 3;
+  transition: transform 0.3s;
+}
+
+.header-nav-ul li {
+  font-weight: $font-wei-2;
+  letter-spacing: $mayor;
+  margin-bottom: 20px;
+}
+.header-nav-ul li:first-child {
+  margin-top: 20px; /* Espacio vertical en la parte superior del primer elemento */
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type='checkbox']:checked ~ .header-nav-ul {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.header-nav-ul li:not(:last-child) {
+  text-align: center;
+}
+
+.header-nav-ul a {
+  color: map-get($colores, 'turquesa');
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: $tamano4;
+  transition: transform 0.3s;
+  position: relative;
+  display: block;
+  font-weight: $font-wei-2;
+  overflow: hidden;
+
+}
+
+.header-nav-ul a:hover {
+  color: rgb(51, 202, 248);
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(180, 53, 159, 0.3);
+
+  .header-nav-ul a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;    background-color: rgb(51, 202, 248);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+
+ .header-nav-ul a:hover::before {
+  width: 100%;
+ }
+
+  &:hover {
+    color: rgb(51, 202, 248);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (max-width: 767px) {
@@ -160,69 +222,15 @@ h1 {
     border-radius: 5px;
     width: 120%;
   }
-}
-
-.header-nav-ul li {
-  font-weight: $font-wei-2;
-  letter-spacing: $menor;
-}
-input[type='checkbox'] {
-  position: absolute;
-  opacity: 0;
-}
-
-  input[type='checkbox']:checked ~ .header-nav-ul {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.header-nav-ul li:not(:last-child) {
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.header-nav-ul a {
-  color: map-get($colores, 'turquesa');
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: $tamano1;
-  transition: transform 0.3s;
-  position: relative;
-  display: block;
-  font-weight: $font-wei-1;
-
- &:hover {
-  color: rgb(51, 202, 248);
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-}
-
-@media (max-width: 480px) {
-  .header-nav-ul a {
-    font-size: x-small;
-    padding: 17px 14px;
-  }
-}
-@media (max-width: 767px) {
   .header-nav-ul a {
     padding: 13px 15px;
     font-size: small;
   }
 }
 
-.header-nav-ul a {
-  color: rgb(51, 202, 248);
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: medium;
-  transition: transform 0.3s;
-  position: relative;
-  display: block;
-
-  .header-nav-ul a :hover {
-    color: rgb(51, 202, 248);
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+@media (max-width: 480px) {
+  .header-nav-ul a {
+    font-size: x-small;
+    padding: 17px 14px;
   }
 }
