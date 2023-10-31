@@ -5,7 +5,6 @@
 
 .header {
   width: $ancho;
-  max-width: $max-width;
   margin: 0 auto;
   height: $height-header;
   background-image: url('../assets/img/fondoTop.jpg');
@@ -167,6 +166,9 @@ input[type='checkbox']:checked ~ .header-nav-ul {
 }
 
 input[type='checkbox']:checked + .menu-toggle-label {
+  position: fixed;
+  top: 15vh;
+  right: 15vw;
   color: map-get($colores, 'yellow');
   font-size: $tamano10;
 }
