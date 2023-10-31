@@ -1,0 +1,60 @@
+@import '../functions/mixins';
+@import '../base/fonts';
+@import '../base/variables';
+@import '../base/colors';
+
+/* ---------------------------------- ABOUT TAPI-------------------------------------------------*/
+
+// .section-middle__middle-about-div-i {
+//   width: 200px;
+//   height: 200px;
+//   margin: 20px;
+//   border-radius: 10px;
+//   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.828);
+// }
+
+.about-tapi {
+  display: flex; /* Utiliza flexbox para separar los elementos */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  margin-top: 25px;
+}
+
+/* Estilo para el div izquierdo de aboutTapi */
+.section-middle__middle-about-div-i{
+  width: 37%;
+  float: left;
+  padding: 5px;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  max-height: 500px;
+  max-width: 37%;
+}
+
+/* Estilo para la imagen dentro del div izquierdo */
+.middle-about-div-i {
+  max-width: 63%; /* Ajusta la imagen al ancho del div */
+}
+
+/* Estilo para el artículo de texto about tapi*/
+.section-middle__middle-article-about{
+  font-family: 'lato' sa;
+  width: 45%;
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  overflow-y: scroll;
+  max-height: 500px;
+  font-family: 'lato light';
+  color: #a9e8f4;
+}
+
+/* Estilo para el párrafo dentro de .texto */
+.middle-article-about__texto {
+  margin: 0 20px 20px 20px;
+}
+
+/* -----------------------------------------------------------------------------------------------*/

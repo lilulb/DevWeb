@@ -14,6 +14,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -183,14 +184,13 @@ h1 {
   z-index: 10;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   padding: 0px 30px;
   color: rgb(51, 202, 248);
   cursor: pointer;
 }
 
-/* TODO Icono de menú  INNECESARIA? BORRAR */
 @media (max-width: 767px) {
   label[for=menu-toggle-checkbox] {
     font-size: 25px;
@@ -720,6 +720,59 @@ article {
     font-size: 14px;
   }
 }
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+/* ---------------------------------- ABOUT TAPI-------------------------------------------------*/
+.about-tapi {
+  display: flex; /* Utiliza flexbox para separar los elementos */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  margin-top: 25px;
+}
+
+/* Estilo para el div izquierdo de aboutTapi */
+.section-middle__middle-about-div-i {
+  width: 37%;
+  float: left;
+  padding: 5px;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  max-height: 500px;
+  max-width: 37%;
+}
+
+/* Estilo para la imagen dentro del div izquierdo */
+.middle-about-div-i {
+  max-width: 63%; /* Ajusta la imagen al ancho del div */
+}
+
+/* Estilo para el artículo de texto about tapi*/
+.section-middle__middle-article-about {
+  font-family: "lato" sa;
+  width: 45%;
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 10px;
+  background-color: rgba(255, 0, 255, 0.18);
+  border-radius: 10px;
+  overflow-y: scroll;
+  max-height: 500px;
+  font-family: "lato light";
+  color: #a9e8f4;
+}
+
+/* Estilo para el párrafo dentro de .texto */
+.middle-article-about__texto {
+  margin: 0 20px 20px 20px;
+}
+
+/* -----------------------------------------------------------------------------------------------*/
 /* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
 /*Definiendo fuente*/
 /* Agregadno fuentes de google*/
