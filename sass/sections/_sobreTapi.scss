@@ -5,56 +5,168 @@
 
 /* ---------------------------------- ABOUT TAPI-------------------------------------------------*/
 
-// .section-middle__middle-about-div-i {
-//   width: 200px;
-//   height: 200px;
-//   margin: 20px;
-//   border-radius: 10px;
-//   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.828);
-// }
-
-.about-tapi {
-  display: flex; /* Utiliza flexbox para separar los elementos */
-  justify-content: space-between; /* Espacio entre los elementos */
-  align-items: flex-start; /* Alinea los elementos en la parte superior */
-  margin-top: 25px;
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 28px;
+}
+/*-------------------------@media*/
+@media (max-width: 767px) {
+ .about {
+  flex-direction: column;
+    align-items: center;
+  }
 }
 
-/* Estilo para el div izquierdo de aboutTapi */
-.section-middle__middle-about-div-i{
-  width: 37%;
+@media (max-width: 480px) {
+ .about {
+  flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/*------------------  Estilo para la imagen div izquierdo */
+
+.about-tapi__img {
+  border-radius: 5px;
   float: left;
-  padding: 5px;
-  background-color: rgba(255, 0, 255, 0.18);
-  border-radius: 10px;
-  max-height: 500px;
-  max-width: 37%;
+  margin: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.78);
 }
 
-/* Estilo para la imagen dentro del div izquierdo */
-.middle-about-div-i {
-  max-width: 63%; /* Ajusta la imagen al ancho del div */
+.mi__img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  max-height: 100vh;
 }
 
-/* Estilo para el artículo de texto about tapi*/
-.section-middle__middle-article-about{
-  font-family: 'lato' sa;
-  width: 45%;
-  text-align: justify;
+/*-------------------------@media*/
+@media (max-width: 767px) {
+    .about-tapi__img {
+    float: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-tapi__img {
+    float: none; 
+  }
+}
+/* -----------------------------------------------------------------------------------------------*/
+
+/* ---------------------------- Estilo título----------- */
+
+.titulo__h2 {
+  font-size: $tamano6;
+  font-weight: 900;
+  text-align: center;
+  position: absolute;
+  padding: 10px;
+  margin-bottom: 10px;
+  z-index: 2;
+  margin-left: 110px;
+}
+
+#border {
+  color: map-get($colores, 'backround');
+  text-shadow: -1px -1px map-get($colores, 'turquesa'),
+    -1px -1px map-get($colores, 'turquesa'),
+    -1px 1px map-get($colores, 'h1-color'),
+    -1px 1px map-get($colores, 'h1-color');
+}
+
+#wave {
+  color: map-get($colores, 'turquesa');
+  animation: wave 3s ease-in-out infinite;
+  -webkit-animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 47%,
+      10% 48%,
+      33% 54%,
+      54% 60%,
+      70% 61%,
+      84% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+/*-------------------------@media*/
+@media (max-width: 767px) {
+  .about-tapi__titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;  }
+
+  .titulo__h2 {
+    font-size: $tamano7;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+ .titulo__h2 {
+  margin-left: 0;
+  font-size: $tamano7;
+  }
+}
+/* -----------------------------------------------------------------------------------------------*/
+
+/* --------------Estilo para el artículo, texto-----------*/
+.about-tapi__text {
+  font-family: $font2;
+  width: 60%;
   line-height: 1.5;
   letter-spacing: 1px;
   padding: 10px;
-  background-color: rgba(255, 0, 255, 0.18);
-  border-radius: 10px;
   overflow-y: scroll;
-  max-height: 500px;
-  font-family: 'lato light';
-  color: #a9e8f4;
+  max-height: 90vh;
+  margin-top: 80px;
+  color: map-get($colores, 'turquesa');
+  background: linear-gradient(to bottom, rgba(255, 0, 255, 0.18), transparent);
 }
 
-/* Estilo para el párrafo dentro de .texto */
-.middle-article-about__texto {
+.texto {
   margin: 0 20px 20px 20px;
+  text-align: justify;
+  z-index: 1;
+}
+/*-------------------------@media*/
+@media (max-width: 767px) {
+  .about-tapi__text {
+    width: 100%;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+ .about-tapi__text {
+    width: 100%; 
+    margin-top: 70px;
+  }
 }
 
 /* -----------------------------------------------------------------------------------------------*/
