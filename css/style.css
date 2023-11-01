@@ -117,16 +117,36 @@ body {
 /* Estilo h1 */
 h1 {
   font-family: "Nanum Gothic", sans-serif;
-  color: hsla(313, 93%, 48%, 0.788);
+  color: hsl(313, 91.85%, 41.01%);
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: 6px;
   padding: 10px;
   line-height: 21vh;
   margin: 0;
-  text-shadow: 0 0 10px rgba(64, 11, 44, 0.722);
-  z-index: 2;
+  text-shadow: 4px 3px 10px rgba(2, 222, 238, 0.72), 2px 1px 15px rgba(226, 191, 212, 0.99);
+  position: relative; /* Importante para el posicionamiento del subrayado */
 }
+
+/* Efecto de subrayado */
+h1::before {
+  content: ""; /* Agrega un contenido antes del texto */
+  position: absolute;
+  width: 100%; /* Ancho igual al del título */
+  height: 2px; /* Altura del subrayado */
+  background: rgb(51, 202, 248); /* Color del subrayado */
+  bottom: 0; /* Coloca el subrayado en la parte inferior */
+  left: 0; /* Inicia desde la izquierda */
+  transform: scaleX(0); /* Escala inicial para que esté oculto */
+  transform-origin: left; /* Punto de origen desde la izquierda */
+  transition: transform 0.3s ease; /* Agrega una transición suave para el efecto */
+}
+
+/* Efecto de subrayado al pasar el mouse */
+h1:hover::before {
+  transform: scaleX(1); /* Escala para mostrar el subrayado al pasar el mouse */
+}
+
 @media (max-width: 767px) {
   h1 {
     display: flex;
@@ -146,7 +166,6 @@ h1 {
     letter-spacing: 2px;
   }
 }
-
 /* Logos redes */
 .header__div-logos {
   position: absolute;
@@ -870,11 +889,11 @@ article {
 }
 
 #border {
-  text-shadow: -1px -1px rgb(51, 202, 248), -1px -1px rgb(51, 202, 248), -1px 1px hsla(313, 93%, 48%, 0.788), -1px 1px hsla(313, 93%, 48%, 0.788);
+  color: rgb(51, 202, 248);
+  text-shadow: -1px -1px rgb(51, 202, 248), -1px -1px rgb(51, 202, 248), -1px 1px hsl(313, 91.85%, 41.01%), -1px 1px hsl(313, 91.85%, 41.01%);
 }
 
 #wave {
-  color: rgb(51, 202, 248);
   animation: wave 3s ease-in-out infinite;
   -webkit-animation: wave 3s ease-in-out infinite;
 }

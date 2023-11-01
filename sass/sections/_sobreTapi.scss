@@ -71,7 +71,7 @@
 }
 
 #border {
-  color: map-get($colores, 'backround');
+  color: map-get($colores, 'turquesa');
   text-shadow: -1px -1px map-get($colores, 'turquesa'),
     -1px -1px map-get($colores, 'turquesa'),
     -1px 1px map-get($colores, 'h1-color'),
@@ -79,7 +79,7 @@
 }
 
 #wave {
-  color: map-get($colores, 'turquesa');
+  color: map-get($colores, 'backround');
   animation: wave 3s ease-in-out infinite;
   -webkit-animation: wave 3s ease-in-out infinite;
 }
