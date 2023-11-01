@@ -648,13 +648,15 @@ article {
 }
 
 .titulos-info {
-  font-family: "latolighti", sans-serif;
-  color: rgba(237, 213, 60, 0.9098039216);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  letter-spacing: 2;
+  font-size: 36px;
+  color: rgb(51, 202, 248);
+  margin-bottom: 20px;
+  animation: slideIn 1.5s ease forwards;
+  width: 900;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 5px #cf00ff;
 }
 
 .section-preguntasfrec {
@@ -682,7 +684,9 @@ article {
 }
 
 .question-label {
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
   cursor: pointer;
   color: #22d6f6;
   padding: 10px;
@@ -702,7 +706,6 @@ article {
   transition: max-height 0.3s ease-in-out;
   color: #8dd4e0;
   padding: 10px;
-  font-family: "latolighti", sans-serif;
   line-height: 2.5;
   letter-spacing: 1.5;
 }
@@ -735,7 +738,9 @@ article {
   margin-top: 20px;
 }
 .article-cotizacion form label {
-  font-family: "lato";
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
   color: #22d6f6;
   display: block;
   margin-bottom: 5px;
