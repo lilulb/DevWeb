@@ -26,6 +26,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -411,6 +413,71 @@ article {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.533);
   display: inline-block;
   vertical-align: top;
+}
+
+/* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/
+/*Definiendo fuente*/
+/* Agregadno fuentes de google*/
+/*tamaños*/
+/* Espacio entre letras*/
+/*Variables tamaños*/
+/* DEFIENIENDO MAPA DE COLORES */
+/* Estilos para la sección de Cuidados */
+.cuidados {
+  padding: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Estilo para el título y animación */
+.titulito {
+  grid-column: span 3;
+  font-size: 36px;
+  color: rgb(51, 202, 248);
+  margin-bottom: 20px;
+  animation: slideIn 1.5s ease forwards;
+  width: 900;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 5px #cf00ff;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cuidado-item {
+  background: linear-gradient(to bottom, rgba(255, 0, 255, 0.18), transparent);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.cuidado-item h3 {
+  font-size: 24px;
+  color: rgb(51, 202, 248);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.cuidados-item__p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #8dd4e0;
+  background: rgba(49, 3, 49, 0.9019607843); /* Fondo rosa */
+  background-clip: text; /* Hace que el fondo tome el color de texto */
+  -webkit-background-clip: text;
+  font-style: italic;
+  font-weight: 100;
 }
 
 /* UTILIZANDO MIXINS PARA POSICIONAMIENTOS*/

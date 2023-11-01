@@ -1,0 +1,67 @@
+@import '../functions/mixins';
+@import '../base/fonts';
+@import '../base/variables';
+@import '../base/colors';
+
+
+/* Estilos para la sección de Cuidados */
+.cuidados {
+  padding: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* Estilo para el título y animación */
+.titulito {
+  grid-column: span 3;
+  font-size: 36px;
+  color: map-get($colores, 'turquesa');
+  margin-bottom: 20px;
+  animation: slideIn 1.5s ease forwards;
+  width: 900;
+  font-family: $font2;
+  font-size: $tamano6;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 5px #cf00ff;
+}
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cuidado-item {
+  background: linear-gradient(to bottom, rgba(255, 0, 255, 0.18), transparent);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: map-get($colores, 'article-shadow');
+}
+
+.cuidado-item h3 {
+  font-size: 24px;
+  color: map-get($colores, 'turquesa');
+  margin-bottom: 10px;
+  font-weight: 300;
+
+}
+
+.cuidados-item__p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #8dd4e0,;
+  background: map-get($colores, 'background-rosa2'); /* Fondo rosa */
+  background-clip: text; /* Hace que el fondo tome el color de texto */
+  -webkit-background-clip: text;
+font-style: italic;
+  font-weight: 100;
+}
